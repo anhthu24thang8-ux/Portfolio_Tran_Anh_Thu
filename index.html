@@ -371,6 +371,7 @@
       color: #334155;
       line-height: 1.68;
       max-width: 720px;
+      text-align: justify;
     }
 
     /* Contact Cards Grid */
@@ -1441,6 +1442,423 @@
       background: #CBD5E1;
     }
 
+    /* Report Dashboard inside Modal (from PDF) */
+    .report-dash-box {
+      background: #F8FAFC;
+      border: 1px solid #BAE6FD;
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 6px;
+    }
+
+    .report-dash-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #E2E8F0;
+    }
+
+    .report-title-main {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .report-sub-main {
+      font-size: 12px;
+      color: var(--mute);
+      margin-top: 2px;
+    }
+
+    .report-pdf-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      font-size: 11.5px;
+      font-weight: 600;
+      background: #FFFFFF;
+      color: var(--blue-deep);
+      border: 1px solid #BAE6FD;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+
+    .report-pdf-btn:hover {
+      background: var(--blue-subtle);
+      border-color: var(--blue-accent);
+    }
+
+    .report-kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+    }
+
+    .report-kpi-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 10px 6px;
+      text-align: center;
+    }
+
+    .report-kpi-val {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1.1;
+    }
+
+    .report-kpi-val.green { color: #10B981; }
+    .report-kpi-val.red { color: #EF4444; }
+    .report-kpi-val.blue { color: #0284C7; }
+
+    .report-kpi-lbl {
+      font-size: 11px;
+      color: #64748B;
+      margin-top: 4px;
+      font-weight: 500;
+    }
+
+    .report-charts-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .report-chart-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 10px;
+      padding: 12px 14px;
+    }
+
+    .report-chart-title {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .donut-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 12px;
+    }
+
+    .donut-legend {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 11.5px;
+    }
+
+    .month-bars-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .month-bar-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11.5px;
+    }
+
+    .month-bar-label {
+      width: 54px;
+      font-weight: 600;
+      color: #334155;
+    }
+
+    .month-bar-track {
+      flex: 1;
+      height: 10px;
+      background: #F1F5F9;
+      border-radius: 5px;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .month-bar-val {
+      width: 42px;
+      text-align: right;
+      font-size: 11px;
+      font-weight: 600;
+      color: #475569;
+    }
+
+    .report-table-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 10px;
+      padding: 12px;
+    }
+
+    .report-table-scroll {
+      max-height: 220px;
+      overflow-y: auto;
+      border: 1px solid #F1F5F9;
+      border-radius: 6px;
+    }
+
+    .report-data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+      text-align: left;
+    }
+
+    .report-data-table th {
+      background: #F8FAFC;
+      color: #475569;
+      padding: 6px 8px;
+      font-weight: 700;
+      border-bottom: 1px solid #E2E8F0;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+
+    .report-data-table td {
+      padding: 5px 8px;
+      border-bottom: 1px solid #F1F5F9;
+      color: #1E293B;
+    }
+
+    .report-data-table tr:hover td {
+      background: #F8FAFC;
+    }
+
+    .badge-status {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .badge-status.success {
+      background: #DCFCE7;
+      color: #15803D;
+    }
+
+    .badge-status.rejected {
+      background: #FFE4E6;
+      color: #BE123C;
+    }
+
+    .tab-filter-btn {
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid #E2E8F0;
+      background: #FFFFFF;
+      color: #475569;
+      transition: all 0.15s ease;
+    }
+
+    .tab-filter-btn.active {
+      background: var(--blue-deep);
+      color: #FFFFFF;
+      border-color: var(--blue-deep);
+    }
+
+    @media (max-width: 640px) {
+      .report-kpi-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .report-charts-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Casio Event Media Showcase */
+    .casio-media-box {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 4px;
+    }
+    .casio-section-hdr {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .casio-section-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .casio-icon-badge {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .casio-video-frame {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #090D16;
+      border: 1px solid #1E293B;
+      aspect-ratio: 16/9;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    }
+    .casio-video-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.88;
+      transition: opacity 0.3s;
+    }
+    .casio-play-btn {
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(225, 29, 72, 0.92);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(225, 29, 72, 0.45);
+      transition: transform 0.2s, background 0.2s;
+    }
+    .casio-play-btn:hover {
+      transform: scale(1.08);
+      background: rgb(225, 29, 72);
+    }
+    .casio-video-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 12px 14px 10px;
+      background: linear-gradient(to top, rgba(0,0,0,0.92), transparent);
+      color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .casio-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    @media (max-width: 600px) {
+      .casio-gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .casio-photo-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+      display: flex;
+      flex-direction: column;
+    }
+    .casio-photo-wrap {
+      position: relative;
+      aspect-ratio: 16/10;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .casio-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .casio-photo-wrap:hover img {
+      transform: scale(1.04);
+    }
+    .casio-photo-badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: rgba(0,0,0,0.65);
+      backdrop-filter: blur(4px);
+      color: #FFFFFF;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+    .casio-photo-info {
+      padding: 10px 12px;
+    }
+    .casio-photo-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #0F172A;
+      margin-bottom: 2px;
+    }
+    .casio-photo-desc {
+      font-size: 11px;
+      color: #64748B;
+      line-height: 1.45;
+    }
+    .casio-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      padding-top: 10px;
+      border-top: 1px solid #E2E8F0;
+    }
+    @media (max-width: 600px) {
+      .casio-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .casio-stat-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 10px;
+      padding: 8px 6px;
+      text-align: center;
+    }
+    .casio-stat-val {
+      font-size: 15px;
+      font-weight: 800;
+      color: #0F172A;
+      line-height: 1.2;
+    }
+    .casio-stat-lbl {
+      font-size: 10px;
+      color: #64748B;
+      margin-top: 2px;
+    }
+
     /* Toast Notification */
     .toast-box {
       position: fixed;
@@ -1573,17 +1991,7 @@
           <!-- Hình đại diện: Nằm ngang với họ và tên -->
           <div class="avatar-wrapper">
             <div class="avatar-frame" id="avatar-container">
-              <div class="avatar-placeholder" id="avatar-svg-box">
-                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="50" cy="50" r="44" fill="#E0F2FE"/>
-                  <path d="M50 18C41.7 18 35 24.7 35 33C35 41.3 41.7 48 50 48C58.3 48 65 41.3 65 33C65 24.7 58.3 18 50 18Z" fill="#1E3A8A" fill-opacity="0.85"/>
-                  <circle cx="63" cy="38" r="3" fill="#FDE047"/>
-                  <path d="M24 82C24 67.6 35.6 56 50 56C64.4 56 76 67.6 76 82H24Z" fill="#38BDF8" fill-opacity="0.85"/>
-                  <path d="M42 56L50 68L58 56" stroke="#FEF08A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <div class="avatar-name">Trần Anh Thư</div>
-                <div class="avatar-title">Marketing Executive</div>
-              </div>
+              <img src="/assets/aistudio/ava_tr_9cfa4d50.png" alt="Trần Anh Thư" style="width: 100%; height: 100%; object-fit: cover;">
 
               <!-- Upload photo trigger -->
               <label class="avatar-upload-overlay" for="avatar-input" title="Tải ảnh thật lên">
@@ -1608,7 +2016,7 @@
               <span class="role-extra">Trade Marketing · Marketing Activation · Dự án STEM</span>
             </div>
 
-            <p class="hero-summary">Marketing Executive có kinh nghiệm triển khai Trade Marketing, Marketing Activation, POSM, chương trình khuyến mãi và sự kiện tại điểm bán. Có khả năng lập kế hoạch, phối hợp với Sales/đối tác/nhà cung cấp, theo dõi ngân sách và đánh giá hiệu quả chương trình. Hiện có kinh nghiệm tham gia các dự án Marketing trong lĩnh vực Giáo dục, mong muốn phát triển chuyên sâu về Marketing Activation và xây dựng các hoạt động kết nối thương hiệu đến khách hàng và cộng đồng.</p>
+            <p class="hero-summary" style="text-align: justify;">Marketing Executive có kinh nghiệm triển khai Trade Marketing, Marketing Activation, POSM, chương trình khuyến mãi và sự kiện tại điểm bán. Có khả năng lập kế hoạch, phối hợp với Sales/đối tác/nhà cung cấp, theo dõi ngân sách và đánh giá hiệu quả chương trình. Hiện có kinh nghiệm tham gia các dự án Marketing trong lĩnh vực Giáo dục, mong muốn phát triển chuyên sâu về Marketing Activation và xây dựng các hoạt động kết nối thương hiệu đến khách hàng và cộng đồng.</p>
 
             <!-- Lưới thông tin liên hệ 2x2 -->
             <div class="contact-grid">
@@ -1692,19 +2100,19 @@
             <div class="metric-note">Đa ngành & linh hoạt thích ứng</div>
           </div>
           <div class="metric-card">
-            <div class="metric-value">6 Gói Thầu</div>
+            <div class="metric-value">7 Gói Thầu</div>
             <div class="metric-label">Đấu thầu thành công</div>
             <div class="metric-note">Bình quân ~3 tỷ VNĐ / hợp đồng</div>
           </div>
           <div class="metric-card">
-            <div class="metric-value">6 Trường</div>
-            <div class="metric-label">Dự án STEM tại ĐBSCL</div>
-            <div class="metric-note">Nghiệm thu & tập huấn giáo viên</div>
+            <div class="metric-value">Đa Kênh</div>
+            <div class="metric-label">Triển khai Marketing tổng hợp</div>
+            <div class="metric-note">Content · SEO · Social Media · Quảng cáo</div>
           </div>
           <div class="metric-card">
-            <div class="metric-value">3 Ngành Lớn</div>
-            <div class="metric-label">Lĩnh vực chuyên môn sâu</div>
-            <div class="metric-note">Giáo dục STEM · Casio · Ô tô</div>
+            <div class="metric-value">End-to-End</div>
+            <div class="metric-label">Lập kế hoạch & Điều phối</div>
+            <div class="metric-note">Từ tiếp nhận yêu cầu đến triển khai và theo dõi công việc</div>
           </div>
         </div>
       </div>
@@ -1712,11 +2120,6 @@
 
     <!-- PHẦN 2: QUÁ TRÌNH LÀM VIỆC -->
     <section class="content-section" id="kinh-nghiem">
-      <div class="section-kicker">
-        <span>Hành trình sự nghiệp</span>
-        <span>·</span>
-        <span>4+ năm kinh nghiệm</span>
-      </div>
       <h2 class="section-title">Quá trình làm việc</h2>
 
       <div class="timeline-list">
@@ -1738,30 +2141,29 @@
 
           <div class="job-tasks-title">Nhiệm vụ trọng tâm</div>
           <ul class="job-tasks">
-            <li>Xây dựng và triển khai chiến lược marketing đa kênh (Social Media, Website, Ads chuyển đổi) cho hệ sinh thái khóa học, đầu sách và học cụ STEM.</li>
-            <li>Nghiên cứu từ khóa, tối ưu bài viết chuẩn SEO, sáng tạo nội dung website, blog chuyên môn và fanpage cộng đồng giáo dục.</li>
-            <li>Quản lý, kèm cặp đội ngũ marketing nội bộ; phân bổ content, ads, social và đánh giá chỉ số KPI định kỳ theo tuần/tháng.</li>
-            <li>Trực tiếp phụ trách hồ sơ đấu thầu mua sắm thiết bị giáo dục: hoàn thành xuất sắc 6 hợp đồng thành công (2025 – 2026), giá trị bình quân ~3 tỷ VNĐ/gói thầu.</li>
-            <li>Chủ trì triển khai thực địa dự án STEM tại 6 trường học trọng điểm khu vực Đồng bằng sông Cửu Long: điều phối giao nhận, nghiệm thu kỹ thuật và tổ chức tập huấn giáo viên.</li>
+            <li>Phối hợp cùng Content Marketing và Thiết kế để lên ý tưởng, thống nhất phương án thực hiện cho từng dự án.</li>
+            <li>Phân bổ công việc, theo dõi tiến độ và nhắc nhở các thành viên hoàn thành đúng thời hạn.</li>
+            <li>Kiểm tra, góp ý và yêu cầu điều chỉnh sản phẩm trước khi trình BLĐ phê duyệt.</li>
+            <li>Chủ động xử lý hoặc báo cáo kịp thời những khó khăn, vướng mắc ảnh hưởng đến tiến độ dự án.</li>
+            <li>Lập và quản lý kế hoạch nội dung trên Facebook, ZAlO, Website và các kênh truyền thông nội bộ.</li>
+            <li>Phối hợp cùng đội nhóm thực hiện các sản phẩm như bài viết, hình ảnh, video ngắn, hồ sơ năng lực, brochure, tài liệu giới thiệu, poster và các ấn phẩm truyền thông khác.</li>
+            <li>Sử dụng Canva để thực hiện hoặc chỉnh sửa các ấn phẩm cơ bản trong trường hợp cần triển khai nhanh.</li>
+            <li>Hỗ trợ quay, chụp và dựng video cơ bản bằng điện thoại phục vụ hoạt động truyền thông; không yêu cầu kỹ thuật chuyên nghiệp.</li>
+            <li>Đăng tải, cập nhật và kiểm tra nội dung trên Website, mạng xã hội và các kênh truyền thông của Công ty theo yêu cầu.</li>
+            <li>Phối hợp xây dựng nội dung truyền thông cho các hoạt động sinh nhật, đào tạo, workshop, vinh danh, ngày lễ và chương trình gắn kết nội bộ.</li>
+            <li>Tham gia chuẩn bị nội dung, kịch bản, ấn phẩm, quà tặng và các hạng mục liên quan.</li>
+            <li>Phối hợp điều hành chương trình và xử lý các công việc phát sinh trong quá trình tổ chức.</li>
+            <li>Tổ chức sự kiện giáo dục: Phối hợp tổ chức các chương trình giao lưu, trao đổi và trải nghiệm giáo dục STEM, AI & Robotics tại các trường học và địa phương.</li>
+            <li>Kết nối đối tác: Tham gia kết nối doanh nghiệp, nhà trường và các đơn vị địa phương nhằm thúc đẩy hợp tác trong lĩnh vực giáo dục công nghệ.</li>
+            <li>Điều phối sự kiện: Phối hợp với các bên liên quan trong công tác chuẩn bị nội dung, lên kế hoạch tổ chức và triển khai các hoạt động theo mục tiêu chương trình.</li>
+            <li>Truyền thông sự kiện: Hỗ trợ xây dựng nội dung, hình ảnh truyền thông và quảng bá các chương trình giáo dục STEM, AI & Robotics đến trường học, đối tác và khách hàng tiềm năng.</li>
           </ul>
-
-          <div class="job-achievements">
-            <div class="achieve-title">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#CA8A04" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-              <span>Thành tựu nổi bật</span>
-            </div>
-            <div class="achieve-grid">
-              <div class="achieve-box">✓ 6 hợp đồng đấu thầu thành công (~18 tỷ VNĐ tổng giá trị thầu)</div>
-              <div class="achieve-box">✓ Triển khai STEM chuẩn hóa tại 6 trường học ĐBSCL đạt 100% nghiệm thu</div>
-              <div class="achieve-box">✓ Tăng trưởng organic traffic website giáo dục qua chuỗi bài SEO</div>
-            </div>
-          </div>
 
           <div class="job-footer">
             <div class="job-tags">
-              <span class="tag-item">Đấu thầu thiết bị</span>
+              <span class="tag-item">Đấu thầu thiết kế thi công phòng học</span>
               <span class="tag-item">Triển khai STEM</span>
-              <span class="tag-item">SEO Content</span>
+              <span class="tag-item">SEO WEB</span>
               <span class="tag-item">Tập huấn giáo viên</span>
             </div>
             <button class="btn-view-job-results" onclick="filterByCompany('bizmo')">
@@ -1793,18 +2195,6 @@
             <li>Điều phối sự kiện, activation tại cửa hàng, gian hàng trưng bày tại Trung tâm thương mại và POP-UP Store; phối hợp chuẩn hóa POSM tại điểm bán.</li>
             <li>Theo dõi, đánh giá chỉ số ROI sau mỗi chiến dịch và lập báo cáo phân tích đề xuất tối ưu hóa chi phí vận hành cho ban giám đốc.</li>
           </ul>
-
-          <div class="job-achievements">
-            <div class="achieve-title">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#CA8A04" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-              <span>Thành tựu nổi bật</span>
-            </div>
-            <div class="achieve-grid">
-              <div class="achieve-box">✓ Tăng trưởng doanh số bán lẻ tại điểm bán trong các đợt chạy POP-UP Store</div>
-              <div class="achieve-box">✓ Tối ưu hóa ngân sách khuyến mãi nhờ phân tích dữ liệu bán hàng</div>
-              <div class="achieve-box">✓ Hoàn thiện quy trình phối hợp bán hàng và marketing cho showroom</div>
-            </div>
-          </div>
 
           <div class="job-footer">
             <div class="job-tags">
@@ -1840,20 +2230,11 @@
             <li>Lập kế hoạch chương trình khuyến mãi, activation tại điểm bán, gian hàng POP-UP tại các Trung tâm thương mại lớn (Vincom, Takashimaya, Aeon Mall).</li>
             <li>Thiết kế, giám sát sản xuất, phân bổ và nghiệm thu chất lượng hệ thống POSM (standee, tent card, display cabinet, backdrop) tại chuỗi cửa hàng bán lẻ.</li>
             <li>Thực hiện thủ tục pháp lý: Soạn thảo hồ sơ, đăng ký và thông báo chương trình khuyến mãi với Sở Công Thương đúng tiến độ và quy định nhà nước.</li>
-            <li>Tổ chức sự kiện tri ân khách hàng, lễ kỷ niệm sinh nhật thương hiệu tại TTTM và cửa hàng trọng điểm; lập báo cáo đánh giá sau chiến dịch.</li>
+            <li>Tổ chức sự kiện tri ân khách hàng, lễ kỷ niệm và lễ ra mắt sản phẩm tại TTTM và các cửa hàng trọng điểm</li>
+            <li>Phối hợp với các bộ phận liên quan và nhà cung cấp trong quá trình chuẩn bị, sản xuất vật phẩm truyền thông và triển khai sự kiện, đảm bảo tiến độ thực hiện.</li>
+            <li>Theo dõi, tổng hợp và đánh giá chỉ số ROI sau các chương trình Marketing.</li>
+            <li>Phân tích và đề xuất các phương án cải thiện cho những chiến dịch tiếp theo.</li>
           </ul>
-
-          <div class="job-achievements">
-            <div class="achieve-title">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#CA8A04" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-              <span>Thành tựu nổi bật</span>
-            </div>
-            <div class="achieve-grid">
-              <div class="achieve-box">✓ Đăng ký thành công 100% hồ sơ khuyến mãi với Sở Công Thương đúng hạn</div>
-              <div class="achieve-box">✓ Đồng bộ nhận diện POSM chuẩn Casio quốc tế tại hơn 50+ điểm bán</div>
-              <div class="achieve-box">✓ Tổ chức thành công chuỗi sự kiện tri ân thu hút hàng ngàn lượt khách</div>
-            </div>
-          </div>
 
           <div class="job-footer">
             <div class="job-tags">
@@ -2088,34 +2469,40 @@
     <div class="modal-window" onclick="event.stopPropagation()">
       <div class="modal-header">
         <div class="modal-title-wrap">
-          <strong id="modal-company">Bizmo STEM</strong> · <span id="modal-type">Hồ Sơ Đấu Thầu</span>
+          <strong id="modal-company">Anh Khuê Watch (Casio)</strong> · <span id="modal-type">Sự Kiện Tri Ân</span>
         </div>
         <button class="btn-close-modal" onclick="closeModalDirect()" aria-label="Đóng">&times;</button>
       </div>
       <div class="modal-body">
-        <h3 class="modal-headline" id="modal-title">Tiêu đề dự án</h3>
+        <h3 class="modal-headline" id="modal-title">Sự kiện kỷ niệm & Tri ân khách hàng thân thiết tại TTTM</h3>
         <div class="modal-metric-badge" id="modal-metric">
-          Chỉ số ấn tượng: 6 hợp đồng trúng thầu (~3 tỷ VNĐ / hợp đồng)
+          Chỉ số ấn tượng: Thu hút 3.500+ lượt khách tham quan · Phủ sóng truyền thông & Sold out 100% bản giới hạn
         </div>
 
-        <div>
-          <div class="modal-section-title">Bối cảnh dự án</div>
-          <div class="modal-box-context" id="modal-context">Nội dung bối cảnh</div>
-        </div>
+        <!-- Khung trình diễn Video & Hình ảnh riêng cho Sự kiện Tri Ân Casio (prj-8) -->
+        <div id="modal-casio-showcase" style="display: none;"></div>
 
-        <div>
-          <div class="modal-section-title">Mục tiêu chiến dịch</div>
-          <ul class="modal-bullets" id="modal-objectives"></ul>
-        </div>
+        <!-- Nội dung tiêu chuẩn cho các dự án khác -->
+        <div id="modal-standard-sections" style="display: flex; flex-direction: column; gap: 20px;">
+          <div>
+            <div class="modal-section-title">Bối cảnh dự án</div>
+            <div class="modal-box-context" id="modal-context">Nội dung bối cảnh</div>
+          </div>
 
-        <div>
-          <div class="modal-section-title">Kế hoạch & Triển khai thực tế</div>
-          <div class="modal-steps-list" id="modal-execution"></div>
-        </div>
+          <div>
+            <div class="modal-section-title">Mục tiêu chiến dịch</div>
+            <ul class="modal-bullets" id="modal-objectives"></ul>
+          </div>
 
-        <div>
-          <div class="modal-section-title">Kết quả & Giá trị mang lại</div>
-          <div class="modal-outcomes-list" id="modal-outcomes"></div>
+          <div>
+            <div class="modal-section-title">Kế hoạch & Triển khai thực tế</div>
+            <div class="modal-steps-list" id="modal-execution"></div>
+          </div>
+
+          <div>
+            <div class="modal-section-title">Kết quả & Giá trị mang lại</div>
+            <div class="modal-outcomes-list" id="modal-outcomes"></div>
+          </div>
         </div>
       </div>
       <div class="modal-footer">
@@ -2220,14 +2607,14 @@
         companyKey: "bizmo",
         companyName: "Bizmo STEM",
         type: "video",
-        typeName: "Sáng Tạo Video Ngắn (Short-form)",
-        title: "Kịch bản & Sản xuất Video ngắn TikTok / Reel giáo dục STEM",
-        summary: "Sáng tạo các video clip ngắn ghi lại khoảnh khắc học sinh thí nghiệm khoa học vui nhộn, truyền cảm hứng đam mê khoa học cho học sinh và phụ huynh.",
+        typeName: "Media & Video Marketing",
+        title: "Media Marketing - Ngành Giáo Dục STEM - AI ROBOTICS",
+        summary: "Sáng tạo nội dung đa phương tiện, kịch bản video ngắn TikTok/Reel, thiết kế ấn phẩm và truyền thông các chương trình trải nghiệm STEM & AI Robotics.",
         metricHighlight: "Hơn 500.000+ lượt tiếp cận trên các nền tảng Reels & TikTok",
-        context: "Thu hút sự chú ý của đối tượng phụ huynh trẻ và các bạn học sinh thông qua định dạng video ngắn giải trí kết hợp kiến thức khoa học trực quan.",
+        context: "Quảng bá và truyền thông thương hiệu giáo dục STEM & AI Robotics; xây dựng nội dung số tiếp cận học sinh, phụ huynh và lan tỏa các hoạt động trải nghiệm tại trường học.",
         objectives: [
           "Xây dựng hình tượng thương hiệu giáo dục hiện đại, gần gũi, không khô khan.",
-          "Truyền tải các thí nghiệm STEM dễ hiểu trong vòng 30 - 60 giây.",
+          "Truyền tải các thí nghiệm STEM và mô hình AI Robotics dễ hiểu trong vòng 30 - 60 giây.",
           "Tăng lượng tương tác và số người theo dõi fanpage / kênh TikTok chính thức."
         ],
         execution: [
@@ -2300,54 +2687,32 @@
         companyKey: "anhkhue",
         companyName: "Anh Khuê Watch (Casio)",
         type: "posm",
-        typeName: "Thiết Kế & Triển Khai POSM",
-        title: "Đồng bộ hệ thống POSM chuẩn nhận diện Casio tại điểm bán",
-        summary: "Quản lý toàn bộ vòng đời sản xuất, kiểm định chất lượng và phân bổ hơn 500+ hạng mục POSM tại hệ thống showroom và đại lý ủy quyền trên toàn quốc.",
+        typeName: "Hình Ảnh POSM & Showroom",
+        title: "Anh Khuê Watch (Casio)",
+        thumbnail: "/assets/images/casio_watch_booth.jpg",
+        youtubeUrl: "https://www.youtube.com/results?search_query=casio+gshock+vietnam+event",
+        summary: "",
         metricHighlight: "50+ điểm bán & showroom chuẩn hóa nhận diện quốc tế",
-        context: "Thương hiệu đồng hồ Casio & G-Shock yêu cầu tiêu chuẩn trưng bày khắt khe từ hãng tại thị trường Việt Nam.",
-        objectives: [
-          "Tuân thủ 100% Brand Guideline từ Casio Nhật Bản về kích thước, màu sắc và ánh sáng hộp trưng bày.",
-          "Đảm bảo sản xuất POSM đúng tiến độ trước khi tung các bộ sưu tập mới (G-Shock, Baby-G, Edifice).",
-          "Nghiệm thu thực tế và quản lý danh mục tài sản trưng bày tại từng cửa hàng."
-        ],
-        execution: [
-          "Làm việc trực tiếp với đội ngũ thiết kế đồ họa để bóc tách bản vẽ kỹ thuật chi tiết cho từng quầy kệ.",
-          "Gửi hồ sơ mời chào giá, so sánh và chọn lọc nhà in, nhà thầu sản xuất uy tín với đơn giá tối ưu nhất.",
-          "Giám sát mẫu in thử nghiệm (mockup) trước khi phê duyệt in số lượng lớn.",
-          "Điều phối logistics giao hàng đến các tỉnh thành và yêu cầu nhân viên cửa hàng chụp ảnh nghiệm thu."
-        ],
-        outcomes: [
-          "Hoàn thành xuất sắc việc thay mới nhận diện POSM tại 50+ showroom lớn trước mùa mua sắm cuối năm.",
-          "Tiết kiệm 12% chi phí sản xuất thông qua đấu thầu nhà cung cấp minh bạch.",
-          "Được đại diện Casio khu vực châu Á gửi thư khen ngợi về tính đồng bộ thẩm mỹ tại Việt Nam."
-        ]
+        context: "Bộ sưu tập hình ảnh thực tế hệ thống POSM chuẩn nhận diện Casio tại hơn 50+ showroom và đại lý ủy quyền trên toàn quốc.",
+        objectives: [],
+        execution: [],
+        outcomes: []
       },
       {
         id: "prj-8",
         companyKey: "anhkhue",
         companyName: "Anh Khuê Watch (Casio)",
-        type: "activation",
-        typeName: "Sự Kiện Tri Ân & Khai Trương",
-        title: "Sự kiện kỷ niệm & Tri ân khách hàng thân thiết tại TTTM",
-        summary: "Lên kịch bản chi tiết, điều phối nhân sự và vận hành sự kiện tri ân khách hàng thường niên kết hợp biểu diễn nghệ thuật và minigame trúng thưởng.",
-        metricHighlight: "Thu hút 3.500+ lượt khách tham quan · Phủ sóng truyền thông",
-        context: "Chương trình tri ân thường niên nhằm gắn kết khách hàng trung thành của dòng đồng hồ G-Shock & Baby-G tại sảnh chính TTTM lớn ở TP.HCM.",
-        objectives: [
-          "Tạo điểm nhấn truyền thông bùng nổ, tri ân khách hàng VIP có đóng góp doanh số cao.",
-          "Khai trương góc trưng bày phiên bản giới hạn (Limited Edition) thu hút cộng đồng sưu tầm.",
-          "Đẩy mạnh doanh số bán buôn và bán lẻ ngay trong ngày diễn ra đại nhạc hội mini."
-        ],
-        execution: [
-          "Lên timeline kịch bản chương trình chi tiết từ lễ tân đón tiếp, phát biểu, bốc thăm may mắn.",
-          "Điều phối đơn vị thi công sân khấu, âm thanh ánh sáng và backdrop photobooth check-in chuyên nghiệp.",
-          "Quản lý đội ngũ PG, MC và nhân sự hỗ trợ khách VIP thử đồng hồ và nhận quà kỷ niệm.",
-          "Liên hệ cơ quan báo chí và các trang tin giới trẻ đưa tin lan tỏa về sự kiện."
-        ],
-        outcomes: [
-          "Sự kiện diễn ra suôn sẻ, không có sự cố kỹ thuật hay an ninh phát sinh.",
-          "Có hơn 3.500 lượt khách dừng chân tham gia các hoạt động tại sảnh TTTM.",
-          "Bán hết sạch 100% các mẫu đồng hồ bản giới hạn được mở bán đặc biệt tại sự kiện."
-        ]
+        type: "video",
+        typeName: "Video & Hình Ảnh Sự Kiện",
+        title: "Anh Khuê Watch (Casio)",
+        thumbnail: "/assets/images/casio_event_stage.jpg",
+        youtubeUrl: "https://www.youtube.com/results?search_query=casio+gshock+vietnam+event",
+        summary: "",
+        metricHighlight: "Video Recap 4K & Bộ sưu tập ảnh sự kiện",
+        context: "Hình ảnh thực tế & Video recap đại nhạc hội mini tri ân khách hàng và ra mắt sản phẩm tại TTTM.",
+        objectives: [],
+        execution: [],
+        outcomes: []
       },
       {
         id: "prj-9",
@@ -2357,24 +2722,20 @@
         typeName: "Pháp Lý Khuyến Mãi & Hậu Kiểm",
         title: "Đăng ký chương trình khuyến mãi với Sở Công Thương & Báo cáo",
         summary: "Chịu trách nhiệm pháp lý toàn diện cho mọi chiến dịch khuyến mại lớn nhỏ trên toàn quốc: thông báo, đăng ký cấp phép, giám sát cơ cấu giải thưởng và nộp báo cáo kết quả đúng luật.",
-        metricHighlight: "100% hồ sơ thông qua đúng hạn · Tuân thủ tuyệt đối quy định",
-        context: "Mọi chương trình khuyến mại có quy mô lớn từ giảm giá sốc đến bốc thăm trúng thưởng đều bắt buộc phải thông báo hoặc xin phép Sở Công Thương theo Nghị định 81/2018/NĐ-CP.",
+        metricHighlight: "39 Hồ sơ theo dõi · 27 Đăng ký thành công (69.2%) · 13 Nhóm chương trình",
+        context: "Mọi chương trình khuyến mại có quy mô lớn từ giảm giá sốc đến bốc thăm trúng thưởng đều bắt buộc phải thông báo hoặc xin phép Sở Công Thương theo Nghị định 81/2018/NĐ-CP (Sở Công Thương TP.HCM & Bình Dương).",
         objectives: [
           "Đảm bảo thể lệ chương trình khuyến mãi rõ ràng, minh bạch, đúng luật định.",
           "Nộp hồ sơ trực tuyến qua Cổng Dịch vụ công Quốc gia đúng thời gian quy định trước chiến dịch.",
-          "Thực hiện thủ tục báo cáo kết quả thực hiện và nộp thuế giá trị trúng thưởng đúng thời hạn."
+          "Theo dõi sát sao kết quả từng đợt hồ sơ, giải trình và hoàn tất báo cáo kết quả khuyến mại đúng hạn."
         ],
         execution: [
           "Soạn thảo văn bản thông báo khuyến mãi, biên bản xác định trúng thưởng và bảng kê quà tặng chi tiết.",
           "Tương tác trực tiếp với chuyên viên phụ trách của Sở Công Thương các tỉnh thành để giải trình nếu có.",
-          "Theo dõi tiến độ duyệt hồ sơ và lưu trữ đầy đủ mã số tiếp nhận làm căn cứ xuất hóa đơn khuyến mãi.",
-          "Tổng kết danh sách khách hàng trúng thưởng sau khi chương trình kết thúc và gửi báo cáo hoàn tất."
+          "Theo dõi tiến độ duyệt hồ sơ qua mã biên nhận và lưu trữ đầy đủ làm căn cứ xuất hóa đơn khuyến mãi.",
+          "Lập bảng báo cáo số liệu tổng hợp chi tiết theo dõi 39 hồ sơ, phân tích tỷ lệ thành công theo nhóm chương trình và từng tháng."
         ],
-        outcomes: [
-          "Đăng ký và thông báo thành công hơn 40+ đợt khuyến mãi mà không gặp bất kỳ lỗi vi phạm hành chính nào.",
-          "Giúp doanh nghiệp tự tin triển khai các chương trình kích cầu mà không lo rủi ro pháp lý.",
-          "Tối ưu thời gian duyệt hồ sơ chỉ trong vòng 3 ngày làm việc thông qua chuẩn bị bài bản."
-        ]
+        outcomes: []
       }
     ];
 
@@ -2395,6 +2756,56 @@
       }
 
       container.innerHTML = filtered.map(p => {
+        if (p.thumbnail) {
+          return `
+            <div class="card-project" onclick="openProjectModal('${p.id}')" style="display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; padding: 0;">
+              <div>
+                <div style="position: relative; width: 100%; aspect-ratio: 16/10; overflow: hidden; background: #0F172A;">
+                  <img src="${p.thumbnail}" alt="${p.title}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                  <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 60%); pointer-events: none;"></div>
+                  
+                  <div style="position: absolute; top: 12px; left: 12px; display: flex; gap: 6px;">
+                    <span style="font-size: 10.5px; font-weight: 700; background: rgba(15,23,42,0.75); backdrop-filter: blur(4px); color: #FFF; padding: 3px 8px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2);">
+                      ${p.type === 'video' ? '▶ Video Recap' : '📷 Hình ảnh thực tế'}
+                    </span>
+                  </div>
+
+                  <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none;">
+                    <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(225, 29, 72, 0.92); color: #FFF; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.35);">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="transform: translateX(1px);"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="project-body" style="padding: 16px 18px 12px;">
+                  <div class="project-meta-line" style="color: #64748B; font-weight: 600; font-size: 11.5px;">${p.companyName} · ${p.typeName}</div>
+                  <h3 class="project-title" style="margin-top: 4px; margin-bottom: 8px; font-size: 16px; font-weight: 700; color: #0F172A;">${p.title}</h3>
+
+                  <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px;">
+                    <span style="font-size: 11px; font-weight: 600; color: #0284C7; background: #F0F9FF; border: 1px solid #BAE6FD; padding: 3px 8px; border-radius: 6px; display: inline-flex; align-items: center; gap: 4px;">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                      Ảnh thực tế
+                    </span>
+                    <span style="font-size: 11px; font-weight: 600; color: #E11D48; background: #FFF1F2; border: 1px solid #FECDD3; padding: 3px 8px; border-radius: 6px; display: inline-flex; align-items: center; gap: 4px;">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+                      Video 4K
+                    </span>
+                    <a href="${p.youtubeUrl || 'https://www.youtube.com'}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" style="font-size: 11px; font-weight: 700; color: #DC2626; background: #FEF2F2; border: 1px solid #FCA5A5; padding: 3px 8px; border-radius: 6px; display: inline-flex; align-items: center; gap: 4px; text-decoration: none;" title="Xem trên YouTube">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                      Link YouTube
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-metric-banner" style="background: #F8FAFC; border-top: 1px solid #E2E8F0; padding: 10px 18px;">
+                <span class="project-metric-text" style="color: #0369A1; font-weight: 600;">${p.metricHighlight}</span>
+                <span class="project-link-label" style="font-weight: 700; color: #E11D48;">Xem Video & Ảnh &rarr;</span>
+              </div>
+            </div>
+          `;
+        }
+
         const isYellow = (p.type === 'activation' || p.type === 'video');
         const colorClass = isYellow ? 'yellow' : 'blue';
         return `
@@ -2458,6 +2869,394 @@
       document.getElementById('ket-qua').scrollIntoView({behavior: 'smooth'});
     }
 
+    // Dữ liệu 39 hồ sơ từ báo cáo PDF Sở Công Thương
+    const dossiersData = [
+      { no: 1, date: "26/05", dossierCode: "—", receiptCode: "H29.2-230526-2652", program: "Pop-up An Lạc", status: "Thành công" },
+      { no: 2, date: "31/05", dossierCode: "G22.99-230531-020286", receiptCode: "H29.2-230531-7340", program: "Pop-up An Lạc", status: "Thành công" },
+      { no: 3, date: "09/06", dossierCode: "G22.99-230609-020078", receiptCode: "H29.2-230609-5735", program: "G-Shock (giảm giá / mua tặng)", status: "Thành công" },
+      { no: 4, date: "09/06", dossierCode: "G22.99-230609-020146", receiptCode: "H29.2-230609-7103", program: "G-Shock (giảm giá / mua tặng)", status: "Thành công" },
+      { no: 5, date: "09/06", dossierCode: "G22.99-230609-020287", receiptCode: "H29.2-230609-8106", program: "G-Shock (giảm giá / mua tặng)", status: "Thành công" },
+      { no: 6, date: "09/06", dossierCode: "G22.99-230609-020193", receiptCode: "H29.2-230609-7493", program: "G-Shock (giảm giá / mua tặng)", status: "Thành công" },
+      { no: 7, date: "12/06", dossierCode: "G22.99-230612-020145", receiptCode: "H29.2-230612-8423", program: "Mùa hè rực rỡ", status: "Từ chối" },
+      { no: 8, date: "19/06", dossierCode: "G22.99-230619-020174", receiptCode: "H29.2-230619-12563", program: "Mùa hè rực rỡ", status: "Từ chối" },
+      { no: 9, date: "19/06", dossierCode: "G22.99-230619-020140", receiptCode: "H29.2-230619-10618", program: "Mùa hè rực rỡ", status: "Thành công" },
+      { no: 10, date: "20/06", dossierCode: "G22.99-230620-020366", receiptCode: "H29.2-230620-16465", program: "Mùa hè rực rỡ", status: "Thành công" },
+      { no: 11, date: "21/06", dossierCode: "G22.99-230621-020149", receiptCode: "H29.2-230621-0540", program: "Tưng bừng mua sắm hè", status: "Thành công" },
+      { no: 12, date: "21/06", dossierCode: "G22.99-230621-020219", receiptCode: "H29.2-230621-1111", program: "Hợp tác Co.opmart – Casio", status: "Thành công" },
+      { no: 13, date: "22/06", dossierCode: "G22.99-230622-020169", receiptCode: "H29.2-230622-4160", program: "Liên kết đối tác thời trang", status: "Thành công" },
+      { no: 14, date: "23/06", dossierCode: "G22.99-230623-020393", receiptCode: "H29.2-230623-8395", program: "VStyle", status: "Thành công" },
+      { no: 15, date: "26/06", dossierCode: "G22.99-230626-020618", receiptCode: "H29.2-230626-0753", program: "VStyle", status: "Thành công" },
+      { no: 16, date: "27/06", dossierCode: "G22.99-230627-00706", receiptCode: "H29.2-230627-0663", program: "Tưng bừng mua sắm hè", status: "Thành công" },
+      { no: 17, date: "27/06", dossierCode: "G22.99-230627-020780", receiptCode: "H29.2-230627-0717", program: "Bán hàng đặc biệt", status: "Thành công" },
+      { no: 18, date: "01/07", dossierCode: "G22.99-230701-020005", receiptCode: "H29.2-230701-0360", program: "VStyle", status: "Thành công" },
+      { no: 19, date: "03/07", dossierCode: "G22.99-230703-020222", receiptCode: "H29.2-230703-0750", program: "G-Shock (giảm giá / mua tặng)", status: "Từ chối" },
+      { no: 20, date: "03/07", dossierCode: "G22.99-230703-020187", receiptCode: "H29.2-230703-0685", program: "Liên kết đối tác thời trang", status: "Từ chối" },
+      { no: 21, date: "04/07", dossierCode: "G22.99-230704-020153", receiptCode: "PAKN20230704-0145820", program: "Pop-up An Lạc", status: "Thành công" },
+      { no: 22, date: "04/07", dossierCode: "G22.99-230704-020184", receiptCode: "H29.2-230704-0870", program: "Remarketing 2023", status: "Thành công" },
+      { no: 23, date: "04/07", dossierCode: "G22.99-230704-020135", receiptCode: "H29.2-230704-0797", program: "Hợp tác Co.opmart – Casio", status: "Thành công" },
+      { no: 24, date: "04/07", dossierCode: "G22.99-230704-020127", receiptCode: "—", program: "Sale event AEON Bình Dương", status: "Thành công" },
+      { no: 25, date: "06/07", dossierCode: "G22.99-230706-020264", receiptCode: "H29.2-230706-0584", program: "Đồng hồ trên tay – trúng quà lớn", status: "Từ chối" },
+      { no: 26, date: "10/07", dossierCode: "G22.99-230710-020025", receiptCode: "H29.2-230710-0611", program: "G-Shock (giảm giá / mua tặng)", status: "Thành công" },
+      { no: 27, date: "10/07", dossierCode: "G22.99-230710-020038", receiptCode: "H29.2-230710-0651", program: "Liên kết đối tác thời trang", status: "Từ chối" },
+      { no: 28, date: "11/07", dossierCode: "G22.99-230711-020093", receiptCode: "H29.2-230711-0443", program: "Liên kết đối tác thời trang", status: "Thành công" },
+      { no: 29, date: "15/07", dossierCode: "—", receiptCode: "H29.2-230715-0048", program: "Gigamall / Diamond", status: "Từ chối" },
+      { no: 30, date: "15/07", dossierCode: "—", receiptCode: "H29.2-230715-0047", program: "Gigamall / Diamond", status: "Từ chối" },
+      { no: 31, date: "28/07", dossierCode: "G22.99-230728-020221", receiptCode: "H29.2-230728-0179", program: "CLEARSALE", status: "Thành công" },
+      { no: 32, date: "28/07", dossierCode: "G22.99-230728-020233", receiptCode: "H29.2-230728-0191", program: "CLEARSALE", status: "Thành công" },
+      { no: 33, date: "28/07", dossierCode: "G22.99-230728-020241", receiptCode: "H29.2-230728-0199", program: "CLEARSALE", status: "Thành công" },
+      { no: 34, date: "08/08", dossierCode: "G22.99-230808-020279", receiptCode: "H29.2-230808-0335", program: "Pop-up An Lạc", status: "Thành công" },
+      { no: 35, date: "08/08", dossierCode: "G22.99-230808-020262", receiptCode: "H29.2-230808-0313", program: "Remarketing 2023", status: "Từ chối" },
+      { no: 36, date: "10/08", dossierCode: "G22.99-230810-020030", receiptCode: "H29.2-230810-0174", program: "Bán hàng đặc biệt", status: "Thành công" },
+      { no: 37, date: "21/08", dossierCode: "G22.99-230821-020226", receiptCode: "H29.2-230821-0256", program: "Hợp tác Co.opmart – Casio", status: "Từ chối" },
+      { no: 38, date: "21/08", dossierCode: "G22.99-230821-020259", receiptCode: "H29.2-230821-0286", program: "Liên kết đối tác thời trang", status: "Từ chối" },
+      { no: 39, date: "26/08", dossierCode: "G22.99-230826-030001", receiptCode: "—", program: "CLEARSALE", status: "Từ chối" }
+    ];
+
+    const programGroups = [
+      { name: "G-Shock (giảm giá / mua tặng)", total: 6, success: 5, reject: 1, rate: "83.3%" },
+      { name: "Liên kết đối tác thời trang", total: 5, success: 2, reject: 3, rate: "40.0%" },
+      { name: "Pop-up An Lạc", total: 4, success: 4, reject: 0, rate: "100%" },
+      { name: "Mùa hè rực rỡ", total: 4, success: 2, reject: 2, rate: "50.0%" },
+      { name: "CLEARSALE", total: 4, success: 3, reject: 1, rate: "75.0%" },
+      { name: "Hợp tác Co.opmart – Casio", total: 3, success: 2, reject: 1, rate: "66.7%" },
+      { name: "VStyle", total: 3, success: 3, reject: 0, rate: "100%" },
+      { name: "Tưng bừng mua sắm hè", total: 2, success: 2, reject: 0, rate: "100%" },
+      { name: "Bán hàng đặc biệt", total: 2, success: 2, reject: 0, rate: "100%" },
+      { name: "Remarketing 2023", total: 2, success: 1, reject: 1, rate: "50.0%" },
+      { name: "Gigamall / Diamond", total: 2, success: 0, reject: 2, rate: "0%" },
+      { name: "Sale event AEON Bình Dương", total: 1, success: 1, reject: 0, rate: "100%" },
+      { name: "Đồng hồ trên tay – trúng quà lớn", total: 1, success: 0, reject: 1, rate: "0%" }
+    ];
+
+    function renderDossiersTableRows(filterStatus) {
+      const filtered = (filterStatus === 'all')
+        ? dossiersData
+        : dossiersData.filter(d => d.status === filterStatus);
+
+      return `
+        <table class="report-data-table" id="dossiers-table">
+          <thead>
+            <tr>
+              <th style="width: 28px;">#</th>
+              <th style="width: 50px;">Ngày</th>
+              <th>Mã hồ sơ</th>
+              <th>Mã biên nhận</th>
+              <th>Chương trình</th>
+              <th style="text-align: center; width: 95px;">Kết quả</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${filtered.map(d => {
+              const isSuccess = (d.status === 'Thành công');
+              const badgeClass = isSuccess ? 'success' : 'rejected';
+              return `
+                <tr>
+                  <td style="color:#64748B;">${d.no}</td>
+                  <td style="font-weight:600;">${d.date}</td>
+                  <td style="font-family: monospace; font-size: 10.5px;">${d.dossierCode}</td>
+                  <td style="font-family: monospace; font-size: 10.5px;">${d.receiptCode}</td>
+                  <td style="font-weight: 500;">${d.program}</td>
+                  <td style="text-align: center;">
+                    <span class="badge-status ${badgeClass}">${d.status}</span>
+                  </td>
+                </tr>
+              `;
+            }).join('')}
+          </tbody>
+        </table>
+      `;
+    }
+
+    window.filterDossiersTable = function(status, btn) {
+      document.querySelectorAll('.tab-filter-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      const wrap = document.getElementById('dossiers-table-wrap');
+      if (wrap) wrap.innerHTML = renderDossiersTableRows(status);
+    };
+
+    function renderReportDashboard() {
+      return `
+        <div class="report-dash-box">
+          <div class="report-dash-header">
+            <div>
+              <div class="report-title-main">Báo cáo theo dõi hồ sơ đăng ký khuyến mại</div>
+              <div class="report-sub-main">Sở Công Thương TP.HCM & Bình Dương · Giai đoạn 26/05 – 26/08/2023</div>
+            </div>
+            <a href="/assets/aistudio/Ba_o_ca_o_theo_do_i_ho___so__So___Co_ng_Thu_o_ng_-_Claude_bff13d97.pdf" target="_blank" rel="noopener noreferrer" class="report-pdf-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              <span>Xem file PDF gốc</span>
+            </a>
+          </div>
+
+          <!-- 5 Thẻ chỉ số tổng quan (KPI cards) -->
+          <div class="report-kpi-grid">
+            <div class="report-kpi-card">
+              <div class="report-kpi-val">39</div>
+              <div class="report-kpi-lbl">Tổng hồ sơ</div>
+            </div>
+            <div class="report-kpi-card">
+              <div class="report-kpi-val green">27</div>
+              <div class="report-kpi-lbl">Thành công</div>
+            </div>
+            <div class="report-kpi-card">
+              <div class="report-kpi-val red">12</div>
+              <div class="report-kpi-lbl">Bị từ chối</div>
+            </div>
+            <div class="report-kpi-card">
+              <div class="report-kpi-val blue">69.2%</div>
+              <div class="report-kpi-lbl">Tỷ lệ thành công</div>
+            </div>
+            <div class="report-kpi-card">
+              <div class="report-kpi-val">13</div>
+              <div class="report-kpi-lbl">Nhóm chương trình</div>
+            </div>
+          </div>
+
+          <!-- 2 Biểu đồ: Donut tỷ lệ & Tiến độ theo tháng -->
+          <div class="report-charts-grid">
+            <!-- Biểu đồ 1: Donut -->
+            <div class="report-chart-card">
+              <div class="report-chart-title">Tỷ lệ kết quả hồ sơ</div>
+              <div class="donut-wrap">
+                <svg width="110" height="110" viewBox="0 0 100 100" style="transform: rotate(-90deg);">
+                  <!-- Background circle -->
+                  <circle cx="50" cy="50" r="38" fill="none" stroke="#F1F5F9" stroke-width="14" />
+                  <!-- Rejected arc (30.8% = 73.6 / 238.76) -->
+                  <circle cx="50" cy="50" r="38" fill="none" stroke="#F43F5E" stroke-width="14"
+                    stroke-dasharray="238.76" stroke-dashoffset="0" stroke-linecap="butt" />
+                  <!-- Success arc (69.2% = 165.2 / 238.76) -->
+                  <circle cx="50" cy="50" r="38" fill="none" stroke="#10B981" stroke-width="14"
+                    stroke-dasharray="165.2 238.76" stroke-dashoffset="0" stroke-linecap="butt" />
+                  <!-- Center text in correct orientation -->
+                  <g transform="rotate(90 50 50)">
+                    <text x="50" y="47" text-anchor="middle" font-size="14" font-weight="800" fill="#0F172A">69.2%</text>
+                    <text x="50" y="60" text-anchor="middle" font-size="7.5" font-weight="600" fill="#64748B">THÀNH CÔNG</text>
+                  </g>
+                </svg>
+
+                <div class="donut-legend">
+                  <div style="display: flex; align-items: center; gap: 6px;">
+                    <span style="width: 10px; height: 10px; border-radius: 3px; background: #10B981; display: inline-block;"></span>
+                    <span>Thành công: <strong>27</strong> (69.2%)</span>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 6px;">
+                    <span style="width: 10px; height: 10px; border-radius: 3px; background: #F43F5E; display: inline-block;"></span>
+                    <span>Bị từ chối: <strong>12</strong> (30.8%)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Biểu đồ 2: Tiến độ theo tháng -->
+            <div class="report-chart-card">
+              <div class="report-chart-title">Hồ sơ theo tháng</div>
+              <div class="month-bars-list">
+                <div class="month-bar-row">
+                  <span class="month-bar-label">Tháng 5</span>
+                  <div class="month-bar-track" title="Thành công: 2/2 (100%)">
+                    <div style="width: 100%; background: #10B981;"></div>
+                  </div>
+                  <span class="month-bar-val">2/2</span>
+                </div>
+                <div class="month-bar-row">
+                  <span class="month-bar-label">Tháng 6</span>
+                  <div class="month-bar-track" title="Thành công: 13, Từ chối: 2 (86.7%)">
+                    <div style="width: 86.7%; background: #10B981;"></div>
+                    <div style="width: 13.3%; background: #F43F5E;"></div>
+                  </div>
+                  <span class="month-bar-val">13/15</span>
+                </div>
+                <div class="month-bar-row">
+                  <span class="month-bar-label">Tháng 7</span>
+                  <div class="month-bar-track" title="Thành công: 10, Từ chối: 6 (62.5%)">
+                    <div style="width: 62.5%; background: #10B981;"></div>
+                    <div style="width: 37.5%; background: #F43F5E;"></div>
+                  </div>
+                  <span class="month-bar-val">10/16</span>
+                </div>
+                <div class="month-bar-row">
+                  <span class="month-bar-label">Tháng 8</span>
+                  <div class="month-bar-track" title="Thành công: 2, Từ chối: 4 (33.3%)">
+                    <div style="width: 33.3%; background: #10B981;"></div>
+                    <div style="width: 66.7%; background: #F43F5E;"></div>
+                  </div>
+                  <span class="month-bar-val">2/6</span>
+                </div>
+              </div>
+              <div style="font-size: 10.5px; color: #94A3B8; margin-top: 10px; text-align: right;">
+                <span style="color: #10B981; font-weight: 600;">● Xanh: thành công</span> · <span style="color: #F43F5E; font-weight: 600;">● Đỏ: từ chối</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bảng 1: Kết quả theo nhóm chương trình -->
+          <div class="report-table-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <div class="report-chart-title" style="margin-bottom: 0;">Kết quả theo nhóm chương trình (13 nhóm)</div>
+              <span style="font-size: 11px; color: #64748B;">Tổng 39 hồ sơ</span>
+            </div>
+            <div class="report-table-scroll" style="max-height: 180px;">
+              <table class="report-data-table">
+                <thead>
+                  <tr>
+                    <th>Nhóm chương trình</th>
+                    <th style="text-align: center;">Hồ sơ</th>
+                    <th style="text-align: center;">Thành công</th>
+                    <th style="text-align: center;">Từ chối</th>
+                    <th style="text-align: right;">Tỷ lệ đạt</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${programGroups.map(pg => `
+                    <tr>
+                      <td style="font-weight: 600;">${pg.name}</td>
+                      <td style="text-align: center;">${pg.total}</td>
+                      <td style="text-align: center; color: #15803D; font-weight: 700;">${pg.success}</td>
+                      <td style="text-align: center; color: #BE123C; font-weight: 700;">${pg.reject}</td>
+                      <td style="text-align: right; font-weight: 700; color: #0284C7;">${pg.rate}</td>
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Bảng 2: Chi tiết toàn bộ hồ sơ (39 hồ sơ có filter) -->
+          <div class="report-table-card">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 10px;">
+              <div class="report-chart-title" style="margin-bottom: 0;">Chi tiết toàn bộ hồ sơ đăng ký</div>
+              <div style="display: flex; gap: 4px;">
+                <button type="button" class="tab-filter-btn active" onclick="window.filterDossiersTable('all', this)">Tất cả (39)</button>
+                <button type="button" class="tab-filter-btn" onclick="window.filterDossiersTable('Thành công', this)">Thành công (27)</button>
+                <button type="button" class="tab-filter-btn" onclick="window.filterDossiersTable('Từ chối', this)">Bị từ chối (12)</button>
+              </div>
+            </div>
+
+            <div class="report-table-scroll" id="dossiers-table-wrap">
+              ${renderDossiersTableRows('all')}
+            </div>
+
+            <div style="font-size: 10.5px; color: #94A3B8; font-style: italic; margin-top: 8px;">
+              Quy ước: hồ sơ chưa ghi trạng thái cập nhật được tính là thành công. Nhóm chương trình được gộp từ tên chương trình trong file theo dõi.
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderCasioMediaShowcase() {
+      return `
+        <div class="casio-media-box">
+          <!-- Video Section -->
+          <div>
+            <div class="casio-section-hdr" style="margin-bottom: 8px;">
+              <div class="casio-section-title-wrap">
+                <div class="casio-icon-badge" style="background: #FFE4E6; color: #E11D48;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+                </div>
+                <div>
+                  <div style="font-size: 13px; font-weight: 700; color: #0F172A;">Video Recap Sự Kiện Tri Ân & Ra Mắt Sản Phẩm</div>
+                  <div style="font-size: 11px; color: #64748B;">Đại nhạc hội mini & Tri ân khách hàng thân thiết tại TTTM</div>
+                </div>
+              </div>
+              <span style="font-size: 10px; font-weight: 700; background: #FFF1F2; color: #BE123C; padding: 2px 8px; border-radius: 99px; border: 1px solid #FECDD3;">4K UHD · 02:45</span>
+            </div>
+
+            <div class="casio-video-frame">
+              <img src="/assets/images/casio_event_stage.jpg" alt="Video recap sự kiện tri ân Casio G-Shock" id="casio-video-img">
+              <button type="button" class="casio-play-btn" onclick="toggleCasioVideoPlay(this)" aria-label="Phát video recap">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="transform: translateX(1px);"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </button>
+              <div class="casio-video-bar">
+                <div style="width: 100%; height: 5px; background: rgba(255,255,255,0.3); border-radius: 99px; overflow: hidden;">
+                  <div id="casio-video-progress" style="width: 42%; height: 100%; background: #F43F5E;"></div>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 10.5px; opacity: 0.95;">
+                  <span>Casio G-Shock · Synergy of Toughness Event</span>
+                  <span>01:14 / 02:45</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photo Gallery Section -->
+          <div style="padding-top: 12px; border-top: 1px solid #E2E8F0;">
+            <div class="casio-section-hdr" style="margin-bottom: 10px;">
+              <div class="casio-section-title-wrap">
+                <div class="casio-icon-badge" style="background: #E0F2FE; color: #0284C7;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                </div>
+                <div>
+                  <div style="font-size: 13px; font-weight: 700; color: #0F172A;">Hình Ảnh Thực Tế Tại Điểm Bán & Sảnh Sự Kiện</div>
+                  <div style="font-size: 11px; color: #64748B;">Phối cảnh sân khấu, booth trải nghiệm và khu vực check-in</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="casio-gallery-grid">
+              <div class="casio-photo-card">
+                <div class="casio-photo-wrap" onclick="window.open('/assets/images/casio_event_stage.jpg', '_blank')">
+                  <img src="/assets/images/casio_event_stage.jpg" alt="Sân khấu chính Casio G-Shock">
+                  <span class="casio-photo-badge">Sân khấu & Không gian</span>
+                </div>
+                <div class="casio-photo-info">
+                  <div class="casio-photo-title">Sân khấu chính & Đại nhạc hội mini tại TTTM</div>
+                  <div class="casio-photo-desc">Màn hình LED cong khổng lồ trình diễn BST G-Shock MR-G & Baby-G, thu hút hơn 3.500 lượt khách tham quan.</div>
+                </div>
+              </div>
+
+              <div class="casio-photo-card">
+                <div class="casio-photo-wrap" onclick="window.open('/assets/images/casio_watch_booth.jpg', '_blank')">
+                  <img src="/assets/images/casio_watch_booth.jpg" alt="Gian hàng trải nghiệm Casio">
+                  <span class="casio-photo-badge">Trải nghiệm & Check-in</span>
+                </div>
+                <div class="casio-photo-info">
+                  <div class="casio-photo-title">Gian hàng Trải nghiệm & G-Shock Photobooth</div>
+                  <div class="casio-photo-desc">Khu vực quầy trưng bày phát sáng chuẩn quốc tế kết hợp photobooth check-in in ảnh lấy liền cho khách hàng VIP.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event Stats Grid -->
+          <div class="casio-stats-grid">
+            <div class="casio-stat-card">
+              <div class="casio-stat-val">3.500+</div>
+              <div class="casio-stat-lbl">Lượt khách tham quan</div>
+            </div>
+            <div class="casio-stat-card">
+              <div class="casio-stat-val" style="color: #10B981;">100%</div>
+              <div class="casio-stat-lbl">Sold out bản giới hạn</div>
+            </div>
+            <div class="casio-stat-card">
+              <div class="casio-stat-val" style="color: #F43F5E;">50.000+</div>
+              <div class="casio-stat-lbl">Lượt xem video recap</div>
+            </div>
+            <div class="casio-stat-card">
+              <div class="casio-stat-val">Casio Asia</div>
+              <div class="casio-stat-lbl">Khen ngợi chuẩn nhận diện</div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    window.toggleCasioVideoPlay = function(btn) {
+      const img = document.getElementById('casio-video-img');
+      const bar = document.getElementById('casio-video-progress');
+      if (!btn) return;
+      if (btn.dataset.playing === 'true') {
+        btn.dataset.playing = 'false';
+        btn.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="transform: translateX(1px);"><polygon points="5 3 19 12 5 21 5 3"/></svg>';
+        if (img) img.style.opacity = '0.88';
+      } else {
+        btn.dataset.playing = 'true';
+        btn.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" stroke="none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>';
+        if (img) img.style.opacity = '0.98';
+        if (bar) bar.style.width = '75%';
+      }
+    };
+
     // Modal Lightbox
     function openProjectModal(id) {
       const p = projectsData.find(item => item.id === id);
@@ -2467,15 +3266,39 @@
       document.getElementById('modal-type').textContent = p.typeName;
       document.getElementById('modal-title').textContent = p.title;
       document.getElementById('modal-metric').textContent = 'Chỉ số ấn tượng: ' + p.metricHighlight;
-      document.getElementById('modal-context').textContent = p.context;
 
-      document.getElementById('modal-objectives').innerHTML = p.objectives.map(o => `<li>${o}</li>`).join('');
-      document.getElementById('modal-execution').innerHTML = p.execution.map((step, i) => `
-        <div class="modal-step-item"><strong>0${i+1}.</strong> ${step}</div>
-      `).join('');
-      document.getElementById('modal-outcomes').innerHTML = p.outcomes.map(out => `
-        <div class="modal-outcome-item"><span class="modal-check-mark">✓</span><span>${out}</span></div>
-      `).join('');
+      const casioShowcaseEl = document.getElementById('modal-casio-showcase');
+      const standardSectionsEl = document.getElementById('modal-standard-sections');
+
+      // Nếu là dự án Casio (prj-8 hoặc prj-7): thay các div text cũ bằng Hình ảnh & Dạng video
+      if (id === 'prj-8' || id === 'prj-7') {
+        if (standardSectionsEl) standardSectionsEl.style.display = 'none';
+        if (casioShowcaseEl) {
+          casioShowcaseEl.style.display = 'block';
+          casioShowcaseEl.innerHTML = renderCasioMediaShowcase();
+        }
+      } else {
+        if (standardSectionsEl) standardSectionsEl.style.display = 'flex';
+        if (casioShowcaseEl) {
+          casioShowcaseEl.style.display = 'none';
+          casioShowcaseEl.innerHTML = '';
+        }
+
+        document.getElementById('modal-context').textContent = p.context;
+        document.getElementById('modal-objectives').innerHTML = p.objectives.map(o => `<li>${o}</li>`).join('');
+        document.getElementById('modal-execution').innerHTML = p.execution.map((step, i) => `
+          <div class="modal-step-item"><strong>0${i+1}.</strong> ${step}</div>
+        `).join('');
+
+        // Đối với dự án prj-9: hiển thị dashboard báo cáo Sở Công Thương
+        if (id === 'prj-9') {
+          document.getElementById('modal-outcomes').innerHTML = renderReportDashboard();
+        } else {
+          document.getElementById('modal-outcomes').innerHTML = p.outcomes.map(out => `
+            <div class="modal-outcome-item"><span class="modal-check-mark">✓</span><span>${out}</span></div>
+          `).join('');
+        }
+      }
 
       document.getElementById('project-modal').classList.add('active');
       document.body.style.overflow = 'hidden';

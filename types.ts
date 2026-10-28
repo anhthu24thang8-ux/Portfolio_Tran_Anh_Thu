@@ -20,6 +20,8 @@ export interface ProjectResult {
   title: string;
   summary: string;
   metricHighlight: string;
+  thumbnail?: string;
+  youtubeUrl?: string;
   details: {
     context: string;
     objectives: string[];

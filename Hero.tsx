@@ -58,27 +58,11 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onShowToast }) => {
                     className="w-full h-full object-cover"
                   />
                 ) : (
-                  /* Elegant SVG Portrait Illustration in Pastel Blue & Yellow */
-                  <div className="flex flex-col items-center justify-center p-4">
-                    <svg
-                      className="w-24 h-24 sm:w-28 sm:h-28 text-sky-800/80"
-                      viewBox="0 0 100 100"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      {/* Soft background shape */}
-                      <circle cx="50" cy="50" r="44" fill="#E0F2FE" />
-                      <path d="M50 18C41.7 18 35 24.7 35 33C35 41.3 41.7 48 50 48C58.3 48 65 41.3 65 33C65 24.7 58.3 18 50 18Z" fill="#1E3A8A" fillOpacity="0.85" />
-                      {/* Soft Yellow hair highlight/earring accent */}
-                      <circle cx="63" cy="38" r="3" fill="#FDE047" />
-                      {/* Torso */}
-                      <path d="M24 82C24 67.6 35.6 56 50 56C64.4 56 76 67.6 76 82H24Z" fill="#38BDF8" fillOpacity="0.85" />
-                      {/* Professional blazer collar */}
-                      <path d="M42 56L50 68L58 56" stroke="#FEF08A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                    <span className="text-xs sm:text-sm font-semibold text-slate-800 mt-2">Trần Anh Thư</span>
-                    <span className="text-[11px] text-slate-500">Marketing Executive</span>
-                  </div>
+                  <img
+                    src="/assets/aistudio/ava_tr_9cfa4d50.png"
+                    alt={PERSONAL_INFO.name}
+                    className="w-full h-full object-cover"
+                  />
                 )}
 
                 {/* Upload custom photo button hover trigger */}
@@ -128,7 +112,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onShowToast }) => {
             </div>
 
             {/* Lead Summary */}
-            <p className="text-slate-600 leading-relaxed text-xs sm:text-sm lg:text-base max-w-2xl">
+            <p className="text-slate-600 leading-relaxed text-xs sm:text-sm lg:text-base max-w-2xl text-justify">
               {PERSONAL_INFO.summary}
             </p>
 

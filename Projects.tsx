@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FileText, Sparkles, Eye, ArrowUpRight, CheckCircle2, TrendingUp, Presentation, Image as ImageIcon, Video } from 'lucide-react';
+import { FileText, Sparkles, Eye, ArrowUpRight, CheckCircle2, TrendingUp, Presentation, Image as ImageIcon, Video, Play, ExternalLink } from 'lucide-react';
 import { ProjectResult } from '../types';
 import { PROJECTS_RESULTS } from '../data/portfolioData';
 
@@ -149,46 +149,102 @@ export const Projects: React.FC<ProjectsProps> = ({
             onClick={() => onOpenProject(item)}
             className="bg-white border border-slate-200/90 rounded-2xl overflow-hidden shadow-2xs hover:shadow-md hover:border-sky-300 transition-all cursor-pointer flex flex-col justify-between group"
           >
-            {/* Visual Top Card Banner */}
-            <div>
-              <div className={`p-4 sm:p-5 flex items-center justify-between ${getThumbnailBg(item.type)}`}>
-                <div className="flex items-center gap-2">
-                  <div className="p-2 bg-white rounded-lg shadow-2xs">
-                    {getThumbnailIcon(item.type)}
+            {item.thumbnail ? (
+              <div>
+                <div className="relative w-full aspect-16/10 overflow-hidden bg-slate-900">
+                  <img
+                    src={item.thumbnail}
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent pointer-events-none" />
+
+                  <div className="absolute top-3 left-3 flex gap-1.5">
+                    <span className="text-[10.5px] font-bold bg-slate-900/80 backdrop-blur-xs text-white px-2.5 py-1 rounded-md border border-white/20">
+                      {item.type === 'video' ? '▶ Video Recap' : '📷 Hình ảnh thực tế'}
+                    </span>
                   </div>
-                  <div className="text-left">
-                    <span className="text-[11px] font-bold uppercase tracking-wider block opacity-75">
-                      {item.typeName}
-                    </span>
-                    <span className="text-xs font-semibold text-slate-800">
-                      {item.companyName}
-                    </span>
+
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div className="w-12 h-12 rounded-full bg-rose-600/95 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                      <Play className="w-5 h-5 fill-white translate-x-0.5" />
+                    </div>
                   </div>
                 </div>
 
-                <div className="w-7 h-7 rounded-full bg-white/80 group-hover:bg-white flex items-center justify-center transition-colors">
-                  <ArrowUpRight className="w-4 h-4 text-slate-700 group-hover:text-sky-700 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <div className="p-5 space-y-2.5">
+                  <div className="flex items-center gap-2 text-xs text-slate-500">
+                    <span>{item.companyName}</span>
+                    <span aria-hidden="true">·</span>
+                    <span>{item.typeName}</span>
+                  </div>
+
+                  <h3 className="text-base font-bold text-slate-900 group-hover:text-sky-900 transition-colors leading-snug">
+                    {item.title}
+                  </h3>
+
+                  <div className="flex flex-wrap items-center gap-1.5 pt-1">
+                    <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-sky-700 bg-sky-50 border border-sky-200 px-2.5 py-0.5 rounded-md">
+                      <ImageIcon className="w-3 h-3" />
+                      Ảnh thực tế
+                    </span>
+                    <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-rose-700 bg-rose-50 border border-rose-200 px-2.5 py-0.5 rounded-md">
+                      <Video className="w-3 h-3" />
+                      Video 4K
+                    </span>
+                    <a
+                      href={item.youtubeUrl || 'https://www.youtube.com'}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="inline-flex items-center gap-1 text-[11px] font-bold text-red-600 bg-red-50 border border-red-200 px-2.5 py-0.5 rounded-md hover:bg-red-100 transition-colors"
+                      title="Xem trên YouTube"
+                    >
+                      <ExternalLink className="w-3 h-3" />
+                      Link YouTube
+                    </a>
+                  </div>
                 </div>
               </div>
+            ) : (
+              <div>
+                <div className={`p-4 sm:p-5 flex items-center justify-between ${getThumbnailBg(item.type)}`}>
+                  <div className="flex items-center gap-2">
+                    <div className="p-2 bg-white rounded-lg shadow-2xs">
+                      {getThumbnailIcon(item.type)}
+                    </div>
+                    <div className="text-left">
+                      <span className="text-[11px] font-bold uppercase tracking-wider block opacity-75">
+                        {item.typeName}
+                      </span>
+                      <span className="text-xs font-semibold text-slate-800">
+                        {item.companyName}
+                      </span>
+                    </div>
+                  </div>
 
-              {/* Card Body */}
-              <div className="p-5 space-y-2.5">
-                {/* Clean unboxed metadata separator */}
-                <div className="flex items-center gap-2 text-xs text-slate-500">
-                  <span>{item.companyName}</span>
-                  <span aria-hidden="true">·</span>
-                  <span>{item.typeName}</span>
+                  <div className="w-7 h-7 rounded-full bg-white/80 group-hover:bg-white flex items-center justify-center transition-colors">
+                    <ArrowUpRight className="w-4 h-4 text-slate-700 group-hover:text-sky-700 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </div>
                 </div>
 
-                <h3 className="text-base font-bold text-slate-900 group-hover:text-sky-900 transition-colors leading-snug">
-                  {item.title}
-                </h3>
+                <div className="p-5 space-y-2.5">
+                  <div className="flex items-center gap-2 text-xs text-slate-500">
+                    <span>{item.companyName}</span>
+                    <span aria-hidden="true">·</span>
+                    <span>{item.typeName}</span>
+                  </div>
 
-                <p className="text-xs sm:text-sm text-slate-600 line-clamp-3 leading-relaxed">
-                  {item.summary}
-                </p>
+                  <h3 className="text-base font-bold text-slate-900 group-hover:text-sky-900 transition-colors leading-snug">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-xs sm:text-sm text-slate-600 line-clamp-3 leading-relaxed">
+                    {item.summary}
+                  </p>
+                </div>
               </div>
-            </div>
+            )}
 
             {/* Card Footer with Metric Highlight */}
             <div className="p-4 pt-3 mx-5 mb-4 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-between text-xs">
@@ -197,7 +253,7 @@ export const Projects: React.FC<ProjectsProps> = ({
                 <span className="truncate">{item.metricHighlight}</span>
               </div>
               <span className="text-sky-700 font-semibold group-hover:underline text-[11px] shrink-0">
-                Chi tiết
+                {item.thumbnail ? 'Xem Video & Ảnh →' : 'Chi tiết'}
               </span>
             </div>
           </div>
