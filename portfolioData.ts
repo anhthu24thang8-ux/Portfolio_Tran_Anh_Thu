@@ -1,0 +1,411 @@
+import { JobExperience, ProjectResult, SkillCategory, EducationItem } from '../types';
+
+export const PERSONAL_INFO = {
+  name: 'Trần Anh Thư',
+  role: 'Marketing Executive',
+  subtitle: 'Trade Marketing · Marketing Activation · Đấu Thầu & Quản Lý Dự Án STEM',
+  birthDate: '24/08/2000',
+  phone: '0967 258 317',
+  email: 'anhthu24thang8@gmail.com',
+  address: '230/8 Xóm Đất, Phường 8, Quận 11, TP. Hồ Chí Minh',
+  zaloUrl: 'https://zalo.me/0967258317',
+  originalCvPath: '/assets/aistudio/Tra__n_Anh_Thu____Portfolio_Marketing_1f1f7e0e.html',
+  summary:
+    'Marketing Executive có kinh nghiệm triển khai Trade Marketing, Marketing Activation, POSM, chương trình khuyến mãi và sự kiện tại điểm bán. Có khả năng lập kế hoạch, phối hợp với Sales/đối tác/nhà cung cấp, theo dõi ngân sách và đánh giá hiệu quả chương trình. Hiện có kinh nghiệm tham gia các dự án Marketing trong lĩnh vực Giáo dục, mong muốn phát triển chuyên sâu về Marketing Activation và xây dựng các hoạt động kết nối thương hiệu đến khách hàng và cộng đồng.',
+  metrics: [
+    { value: '4+ Năm', label: 'Kinh nghiệm Trade & Marketing', note: 'Đa ngành & linh hoạt thích ứng' },
+    { value: '6 Gói Thầu', label: 'Đấu thầu thành công', note: 'Bình quân ~3 tỷ VNĐ / hợp đồng' },
+    { value: '6 Trường', label: 'Dự án STEM tại ĐBSCL', note: 'Nghiệm thu & tập huấn giáo viên' },
+    { value: '3 Ngành Lớn', label: 'Lĩnh vực chuyên môn sâu', note: 'Giáo dục STEM · Casio · Ô tô' },
+  ],
+};
+
+export const EXPERIENCES: JobExperience[] = [
+  {
+    id: 'bizmo-exp',
+    companyKey: 'bizmo',
+    companyName: 'Công ty Cổ phần Quản lý Đầu tư Bizmo',
+    role: 'Marketing Tổng Hợp – Trợ Lý Dự Án STEM',
+    period: '08/2025 – Hiện tại',
+    location: 'TP. Hồ Chí Minh & Khu vực ĐBSCL',
+    industry: 'Giáo dục – Thiết bị STEM & Học cụ sáng tạo',
+    highlights: [
+      'Xây dựng và triển khai chiến lược marketing đa kênh (Social Media, Website, Ads chuyển đổi) cho hệ sinh thái khóa học, đầu sách và học cụ STEM.',
+      'Nghiên cứu từ khóa, tối ưu bài viết chuẩn SEO, sáng tạo nội dung website, blog chuyên môn và fanpage cộng đồng giáo dục.',
+      'Quản lý, kèm cặp đội ngũ marketing nội bộ; phân bổ content, ads, social và đánh giá chỉ số KPI định kỳ theo tuần/tháng.',
+      'Trực tiếp phụ trách hồ sơ đấu thầu mua sắm thiết bị giáo dục: hoàn thành xuất sắc 6 hợp đồng thành công (2025 – 2026), giá trị bình quân ~3 tỷ VNĐ/gói thầu.',
+      'Chủ trì triển khai thực địa dự án STEM tại 6 trường học trọng điểm khu vực Đồng bằng sông Cửu Long: điều phối giao nhận, nghiệm thu kỹ thuật và tổ chức tập huấn giáo viên.',
+    ],
+    achievements: [
+      '6 hợp đồng đấu thầu thành công (~18 tỷ VNĐ tổng giá trị thầu)',
+      'Triển khai STEM chuẩn hóa tại 6 trường học ĐBSCL đạt 100% tỷ lệ nghiệm thu',
+      'Tăng trưởng lưu lượng tự nhiên (organic traffic) website giáo dục qua chuỗi bài SEO',
+    ],
+    tags: ['Đấu thầu thiết bị', 'Triển khai dự án STEM', 'SEO Content', 'Quản lý team', 'Tập huấn giáo viên'],
+  },
+  {
+    id: 'nhanhau-exp',
+    companyKey: 'nhanhau',
+    companyName: 'Công ty TNHH TM – DV XNK Nhân Hậu',
+    role: 'Leader Marketing',
+    period: '07/2023 – 07/2024',
+    location: 'TP. Hồ Chí Minh',
+    industry: 'Phụ kiện, Phụ tùng & Giải pháp nâng cấp ô tô',
+    highlights: [
+      'Lập kế hoạch tổng thể và trực tiếp triển khai Trade Marketing, Promotion, Brand Activation tại hệ thống showroom, cửa hàng và mạng lưới đại lý.',
+      'Phân tích sâu dữ liệu bán hàng (Sales data) và hành vi khách hàng mục tiêu để đề xuất các chương trình kích cầu phù hợp cho từng phân khúc xe.',
+      'Điều phối sự kiện, activation tại cửa hàng, gian hàng trưng bày tại Trung tâm thương mại và POP-UP Store; phối hợp chuẩn hóa POSM tại điểm bán.',
+      'Theo dõi, đánh giá chỉ số ROI sau mỗi chiến dịch và lập báo cáo phân tích đề xuất tối ưu hóa chi phí vận hành cho ban giám đốc.',
+    ],
+    achievements: [
+      'Tăng trưởng doanh số bán lẻ tại điểm bán trong các đợt chạy POP-UP Store',
+      'Tối ưu hóa ngân sách khuyến mãi nhờ phân tích dữ liệu bán hàng theo phân khúc',
+      'Hoàn thiện quy trình phối hợp bán hàng và marketing cho hệ thống cửa hàng',
+    ],
+    tags: ['Trade Marketing', 'Sales Data Analysis', 'POP-UP Store', 'Activation TTTM', 'POSM Quản lý'],
+  },
+  {
+    id: 'anhkhue-exp',
+    companyKey: 'anhkhue',
+    companyName: 'Công ty Cổ phần Anh Khuê Watch',
+    role: 'Nhân Viên Trade Marketing',
+    period: '04/2022 – 07/2024',
+    location: 'TP. Hồ Chí Minh',
+    industry: 'Nhà phân phối độc quyền Đồng hồ Casio tại Việt Nam',
+    highlights: [
+      'Lập kế hoạch chương trình khuyến mãi, activation tại điểm bán, gian hàng POP-UP tại các Trung tâm thương mại lớn (Vincom, Takashimaya, Aeon Mall).',
+      'Thiết kế, giám sát sản xuất, phân bổ và nghiệm thu chất lượng hệ thống POSM (standee, tent card, display cabinet, backdrop) tại chuỗi cửa hàng bán lẻ.',
+      'Thực hiện thủ tục pháp lý: Soạn thảo hồ sơ, đăng ký và thông báo chương trình khuyến mãi với Sở Công Thương đúng tiến độ và quy định nhà nước.',
+      'Tổ chức sự kiện tri ân khách hàng, lễ kỷ niệm sinh nhật thương hiệu tại TTTM và cửa hàng trọng điểm; lập báo cáo đánh giá sau chiến dịch.',
+    ],
+    achievements: [
+      'Đăng ký thành công 100% hồ sơ khuyến mãi với Sở Công Thương đúng hạn',
+      'Đồng bộ nhận diện POSM chuẩn Casio quốc tế tại hơn 50+ điểm bán toàn quốc',
+      'Tổ chức thành công chuỗi sự kiện tri ân thu hút hàng ngàn lượt khách ghé thăm gian hàng',
+    ],
+    tags: ['Sở Công Thương', 'Đồng hồ Casio', 'Thiết kế POSM', 'Sự kiện tri ân', 'Retail Activation'],
+  },
+];
+
+export const PROJECTS_RESULTS: ProjectResult[] = [
+  {
+    id: 'prj-1',
+    companyKey: 'bizmo',
+    companyName: 'Bizmo STEM',
+    type: 'bao-cao',
+    typeName: 'Hồ Sơ Đấu Thầu & Nghiệm Thu',
+    title: 'Hồ sơ đấu thầu cung cấp thiết bị giáo dục & STEM',
+    summary: 'Chủ trì hoàn thiện toàn bộ hồ sơ kỹ thuật, hồ sơ năng lực và pháp lý cho 6 gói thầu thiết bị giáo dục STEM với tỷ lệ trúng thầu 100%.',
+    metricHighlight: '6 hợp đồng trúng thầu (~3 tỷ VNĐ / hợp đồng)',
+    details: {
+      context: 'Tham gia các gói thầu mua sắm trang thiết bị phòng thực hành STEM và học cụ sáng tạo cho các cơ sở giáo dục công lập và tư thục.',
+      objectives: [
+        'Nghiên cứu kỹ lưỡng hồ sơ mời thầu (E-HSMT) và các tiêu chuẩn kỹ thuật thiết bị giáo dục.',
+        'Xây dựng hồ sơ dự thầu (E-HSDT) chính xác tuyệt đối về tính năng, chứng chỉ nguồn gốc xuất xứ (CO/CQ) và năng lực nhà thầu.',
+        'Đảm bảo mức chào giá cạnh tranh và phương án triển khai bảo hành - đào tạo tối ưu.',
+      ],
+      execution: [
+        'Phối hợp với phòng R&D và nhà sản xuất để tổng hợp đầy đủ bảng thông số kỹ thuật và chứng chỉ kiểm định chất lượng.',
+        'Soạn thảo thuyết minh kỹ thuật, giải pháp đào tạo chuyển giao công nghệ cho đội ngũ giáo viên.',
+        'Kiểm tra rà soát tính hợp lệ của hồ sơ tài chính, báo cáo tài chính kiểm toán và năng lực kinh nghiệm tương tự.',
+        'Theo dõi kết quả mở thầu, tham gia thương thảo hợp đồng và hoàn thiện phụ lục kỹ thuật.',
+      ],
+      outcomes: [
+        'Thành công trúng 6 gói thầu liên tiếp từ 2025 đến đầu 2026.',
+        'Quy mô trung bình mỗi gói thầu đạt xấp xỉ 3 tỷ VNĐ.',
+        'Nhận được đánh giá năng lực tuyệt đối từ phía chủ đầu tư và ban quản lý dự án.',
+      ],
+    },
+  },
+  {
+    id: 'prj-2',
+    companyKey: 'bizmo',
+    companyName: 'Bizmo STEM',
+    type: 'activation',
+    typeName: 'Activation Thực Địa & Chuyển Giao',
+    title: 'Triển khai dự án STEM & Tập huấn tại 6 trường ĐBSCL',
+    summary: 'Trực tiếp điều phối chuỗi cung ứng, bàn giao thiết bị phòng Lab STEM và tổ chức các buổi tập huấn chuyên sâu cho giáo viên bộ môn tại các tỉnh miền Tây.',
+    metricHighlight: '6 trường học trọng điểm · 100% nghiệm thu thành công',
+    details: {
+      context: 'Dự án phổ cập giáo dục STEM thực hành cho học sinh THCS & THPT tại các tỉnh Đồng bằng sông Cửu Long (Cần Thơ, Tiền Giang, Bến Tre...).',
+      objectives: [
+        'Đảm bảo thiết bị STEM được giao nhận, lắp đặt chính xác theo sơ đồ bố trí lớp học đạt chuẩn.',
+        'Tổ chức ngày hội trải nghiệm và buổi tập huấn thực hành trực quan giúp giáo viên tự tin làm chủ giáo trình.',
+        'Ký kết biên bản bàn giao và nghiệm thu kỹ thuật theo đúng tiến độ giải ngân.',
+      ],
+      execution: [
+        'Lên kế hoạch vận chuyển, điều phối đội ngũ kỹ thuật viên lắp đặt đồng loạt tại 6 điểm trường.',
+        'Biên soạn cẩm nang hướng dẫn sử dụng nhanh và kịch bản bài giảng mẫu cho giáo viên.',
+        'Tổ chức buổi workshop trải nghiệm thực tế với sự tham gia của đại diện Phòng Giáo dục, Ban Giám hiệu và giáo viên.',
+        'Xử lý nhanh các vấn đề phát sinh tại chỗ và thực hiện kiểm tra kiểm thử (UAT) trước khi ký nghiệm thu.',
+      ],
+      outcomes: [
+        '100% biên bản bàn giao và nghiệm thu được ký duyệt đúng tiến độ không có khiếu nại.',
+        'Hơn 80+ giáo viên bộ môn được cấp chứng nhận hoàn thành khóa tập huấn sử dụng thiết bị.',
+        'Tạo mối quan hệ mật thiết với ban giám hiệu các trường, mở đường cho các hợp đồng bổ sung vật tư tiêu hao.',
+      ],
+    },
+  },
+  {
+    id: 'prj-3',
+    companyKey: 'bizmo',
+    companyName: 'Bizmo STEM',
+    type: 'content',
+    typeName: 'SEO Content & Digital Marketing',
+    title: 'Chiến lược Content SEO & Xây dựng Website Giáo dục',
+    summary: 'Nghiên cứu từ khóa ngành EdTech, tối ưu cấu trúc bài viết on-page và phát triển hệ sinh thái nội dung blog thu hút khách hàng tiềm năng B2B lẫn B2C.',
+    metricHighlight: '+120% Organic Search Traffic cho các khóa học & tài liệu',
+    details: {
+      context: 'Thương hiệu giáo dục STEM cần mở rộng mức độ nhận diện trực tuyến để thu hút phụ huynh tìm khóa học và trường học tìm kiếm giải pháp thiết bị.',
+      objectives: [
+        'Xác định tập từ khóa mục tiêu có ý định tìm kiếm cao (search intent: giáo dục STEM, thiết bị phòng lab, tài liệu thực hành).',
+        'Sản xuất chuỗi bài viết chuyên sâu có tính thẩm quyền cao và chuẩn SEO on-page.',
+        'Chuyển đổi lưu lượng đọc blog thành form đăng ký nhận tư vấn giáo trình và catalog thiết bị.',
+      ],
+      execution: [
+        'Audit nội dung cũ, nghiên cứu bộ từ khóa ngách bằng Ahrefs / Google Keyword Planner.',
+        'Trực tiếp viết và biên tập các bài viết phân tích xu hướng giáo dục STEM, cẩm nang chọn đồ chơi trí tuệ.',
+        'Tối ưu các thẻ Meta, cấu trúc Heading H1-H3, liên kết nội bộ (internal linking) và Call-to-Action chuyển đổi.',
+        'Phối hợp thiết kế banner đồ họa trực quan gắn kèm bài viết nhằm tăng thời gian lưu trang (time on page).',
+      ],
+      outcomes: [
+        'Hàng loạt từ khóa chủ lực lọt Top 1 - Top 5 trên Google Search.',
+        'Lưu lượng truy cập tự nhiên tăng hơn gấp đôi sau 3 tháng triển khai.',
+        'Tạo ra nguồn khách hàng inbound đều đặn cho bộ phận tuyển sinh và bán sỉ.',
+      ],
+    },
+  },
+  {
+    id: 'prj-4',
+    companyKey: 'bizmo',
+    companyName: 'Bizmo STEM',
+    type: 'video',
+    typeName: 'Sáng Tạo Video Ngắn (Short-form)',
+    title: 'Kịch bản & Sản xuất Video ngắn TikTok / Reel giáo dục STEM',
+    summary: 'Sáng tạo các video clip ngắn ghi lại khoảnh khắc học sinh thí nghiệm khoa học vui nhộn, truyền cảm hứng đam mê khoa học cho học sinh và phụ huynh.',
+    metricHighlight: 'Hơn 500.000+ lượt tiếp cận trên các nền tảng Reels & TikTok',
+    details: {
+      context: 'Thu hút sự chú ý của đối tượng phụ huynh trẻ và các bạn học sinh thông qua định dạng video ngắn giải trí kết hợp kiến thức khoa học trực quan.',
+      objectives: [
+        'Xây dựng hình tượng thương hiệu giáo dục hiện đại, gần gũi, không khô khan.',
+        'Truyền tải các thí nghiệm STEM dễ hiểu trong vòng 30 - 60 giây.',
+        'Tăng lượng tương tác và số người theo dõi fanpage / kênh TikTok chính thức.',
+      ],
+      execution: [
+        'Nghiên cứu xu hướng âm thanh và hiệu ứng thị giác trên TikTok để lên ý tưởng hook thu hút trong 3 giây đầu.',
+        'Viết kịch bản phân cảnh chi tiết (storyboard) và trực tiếp hướng dẫn học sinh/giáo viên diễn xuất tự nhiên.',
+        'Sử dụng CapCut & Premiere để dựng video nhịp điệu nhanh, chèn subtitle sinh động và hiệu ứng âm thanh kích thích tò mò.',
+      ],
+      outcomes: [
+        'Tạo ra chuỗi video viral đạt trung bình hàng chục ngàn lượt xem mỗi video.',
+        'Tăng trưởng hơn 4.000 người theo dõi tự nhiên trong chiến dịch hè.',
+        'Tỷ lệ tin nhắn hỏi thăm khóa học và bộ kit thí nghiệm tăng 35%.',
+      ],
+    },
+  },
+  {
+    id: 'prj-5',
+    companyKey: 'nhanhau',
+    companyName: 'Nhân Hậu Auto',
+    type: 'activation',
+    typeName: 'Activation Điểm Bán & TTTM',
+    title: 'Chuỗi Activation & POP-UP Store tại Trung Tâm Thương Mại',
+    summary: 'Lên ý tưởng, thiết kế phối cảnh và tổ chức gian hàng tương tác trực tiếp giới thiệu phụ kiện ô tô và thiết bị thông minh cho chủ xe.',
+    metricHighlight: 'Gần 2.000 lượt khách trải nghiệm · Tăng 40% doanh số tại chỗ',
+    details: {
+      context: 'Mở rộng tiếp cận khách hàng cao cấp sở hữu xe hơi tại các trung tâm mua sắm sầm uất dịp cuối tuần.',
+      objectives: [
+        'Thu hút khách hàng dừng chân trải nghiệm thử các thiết bị nâng cấp xe thông minh (camera hành trình, màn hình android, cảm biến áp suất lốp).',
+        'Thu thập dữ liệu khách hàng (lead generation) phục vụ telesales và chăm sóc khách hàng.',
+        'Đẩy mạnh doanh số bán sỉ và bán lẻ ngay trong những ngày diễn ra sự kiện.',
+      ],
+      execution: [
+        'Đàm phán thuê mặt bằng và xin cấp phép thi công tại ban quản lý TTTM.',
+        'Thiết kế khu vực mô phỏng khoang lái ô tô thực tế để khách tự tay thao tác tính năng sản phẩm.',
+        'Tổ chức mini game vòng quay may mắn với quà tặng voucher chăm sóc xe nhằm kích thích quét mã QR.',
+        'Phân công nhân sự PG và chuyên viên kỹ thuật tư vấn tận tâm cho từng lượt khách.',
+      ],
+      outcomes: [
+        'Ghi nhận gần 2.000 lượt khách ghé thăm và trải nghiệm gian hàng trong 3 ngày cuối tuần.',
+        'Thu về hơn 600 số điện thoại khách hàng tiềm năng có nhu cầu nâng cấp xe trong tháng.',
+        'Đạt doanh số bán lẻ vượt 140% so với chỉ tiêu KPI đề ra ban đầu.',
+      ],
+    },
+  },
+  {
+    id: 'prj-6',
+    companyKey: 'nhanhau',
+    companyName: 'Nhân Hậu Auto',
+    type: 'bao-cao',
+    typeName: 'Phân Tích Dữ Liệu Bán Hàng & ROI',
+    title: 'Báo cáo tối ưu hóa chương trình khuyến mãi theo phân khúc',
+    summary: 'Sử dụng dữ liệu bán hàng lịch sử để bóc tách biên lợi nhuận, tái cơ cấu cơ cấu quà tặng và phân khúc khách hàng giúp tiết kiệm 20% chi phí khuyến mãi.',
+    metricHighlight: 'Tối ưu 20% ngân sách khuyến mãi · ROI tăng 28%',
+    details: {
+      context: 'Trước đây các chương trình khuyến mãi được áp dụng đại trà dẫn đến biên lợi nhuận bị bào mòn nhưng không kích thích được nhóm khách hàng cao cấp.',
+      objectives: [
+        'Phân tích chi tiết rổ hàng và hành vi mua sắm của từng nhóm phân khúc xe (phổ thông vs xe sang).',
+        'Thiết kế gói combo sản phẩm thông minh thay vì chỉ giảm giá trực tiếp (direct discount).',
+        'Lập bảng theo dõi hiệu quả chi phí trên từng kênh bán hàng trong suốt thời gian khuyến mãi.',
+      ],
+      execution: [
+        'Thu thập dữ liệu hóa đơn 6 tháng gần nhất từ hệ thống phần mềm bán hàng.',
+        'Lập biểu đồ phân tích tỷ lệ mua kèm giữa các mặt hàng chủ lực và phụ kiện thứ cấp.',
+        'Đề xuất gói khuyến mãi "Mua màn hình tặng camera lùi + gói bảo hành mở rộng" thay vì giảm 15% tiền mặt.',
+        'Báo cáo định kỳ hàng tuần cho Ban Giám đốc để điều chỉnh linh hoạt tỷ lệ tồn kho.',
+      ],
+      outcomes: [
+        'Bảo toàn biên lợi nhuận gộp của doanh nghiệp tăng thêm 4.5%.',
+        'Giá trị đơn hàng trung bình (AOV) tăng 18% so với cùng kỳ năm trước.',
+        'Mô hình báo cáo này trở thành quy chuẩn phân tích cho các chiến dịch tiếp theo của công ty.',
+      ],
+    },
+  },
+  {
+    id: 'prj-7',
+    companyKey: 'anhkhue',
+    companyName: 'Anh Khuê Watch (Casio)',
+    type: 'posm',
+    typeName: 'Thiết Kế & Triển Khai POSM',
+    title: 'Đồng bộ hệ thống POSM chuẩn nhận diện Casio tại điểm bán',
+    summary: 'Quản lý toàn bộ vòng đời sản xuất, kiểm định chất lượng và phân bổ hơn 500+ hạng mục POSM tại hệ thống showroom và đại lý ủy quyền trên toàn quốc.',
+    metricHighlight: '50+ điểm bán & showroom chuẩn hóa nhận diện quốc tế',
+    details: {
+      context: 'Thương hiệu đồng hồ Casio & G-Shock yêu cầu tiêu chuẩn trưng bày khắt khe từ hãng tại thị trường Việt Nam.',
+      objectives: [
+        'Tuân thủ 100% Brand Guideline từ Casio Nhật Bản về kích thước, màu sắc và ánh sáng hộp trưng bày.',
+        'Đảm bảo sản xuất POSM đúng tiến độ trước khi tung các bộ sưu tập mới (G-Shock, Baby-G, Edifice).',
+        'Nghiệm thu thực tế và quản lý danh mục tài sản trưng bày tại từng cửa hàng.',
+      ],
+      execution: [
+        'Làm việc trực tiếp với đội ngũ thiết kế đồ họa để bóc tách bản vẽ kỹ thuật chi tiết cho từng kích thước quầy kệ.',
+        'Gửi hồ sơ mời chào giá, so sánh và chọn lọc nhà in, nhà thầu sản xuất uy tín với đơn giá tối ưu nhất.',
+        'Giám sát mẫu in thử nghiệm (mockup/proof) trước khi phê duyệt in số lượng lớn.',
+        'Điều phối logistics giao hàng đến các tỉnh thành và yêu cầu nhân viên cửa hàng chụp ảnh nghiệm thu kèm biên bản.',
+      ],
+      outcomes: [
+        'Hoàn thành xuất sắc việc thay mới nhận diện POSM tại 50+ showroom lớn trước mùa cao điểm mua sắm cuối năm.',
+        'Tiết kiệm 12% chi phí sản xuất thông qua đấu thầu nhà cung cấp minh bạch.',
+        'Được đại diện Casio khu vực châu Á gửi thư khen ngợi về tính đồng bộ thẩm mỹ tại thị trường Việt Nam.',
+      ],
+    },
+  },
+  {
+    id: 'prj-8',
+    companyKey: 'anhkhue',
+    companyName: 'Anh Khuê Watch (Casio)',
+    type: 'activation',
+    typeName: 'Sự Kiện Tri Ân & Khai Trương',
+    title: 'Sự kiện kỷ niệm & Tri ân khách hàng thân thiết tại TTTM',
+    summary: 'Lên kịch bản chi tiết, điều phối nhân sự và vận hành sự kiện tri ân khách hàng thường niên kết hợp biểu diễn nghệ thuật và minigame trúng thưởng.',
+    metricHighlight: 'Thu hút 3.500+ lượt khách tham quan · Phủ sóng truyền thông',
+    details: {
+      context: 'Chương trình tri ân thường niên nhằm gắn kết khách hàng trung thành của dòng đồng hồ G-Shock & Baby-G tại sảnh chính TTTM lớn ở TP.HCM.',
+      objectives: [
+        'Tạo điểm nhấn truyền thông bùng nổ, tri ân khách hàng VIP có đóng góp doanh số cao.',
+        'Khai trương góc trưng bày phiên bản giới hạn (Limited Edition) thu hút cộng đồng sưu tầm đồng hồ.',
+        'Đẩy mạnh doanh số bán buôn và bán lẻ ngay trong ngày diễn ra đại nhạc hội mini.',
+      ],
+      execution: [
+        'Lên timeline kịch bản chương trình chi tiết từ lễ tân đón tiếp, phát biểu, bốc thăm may mắn đến tiết mục ca nhạc.',
+        'Điều phối đơn vị thi công sân khấu, âm thanh ánh sáng và backdrop photobooth check-in chuyên nghiệp.',
+        'Quản lý đội ngũ PG, MC và nhân sự hỗ trợ khách VIP thử đồng hồ và nhận quà kỷ niệm.',
+        'Liên hệ cơ quan báo chí và các trang tin giới trẻ đưa tin lan tỏa về sự kiện.',
+      ],
+      outcomes: [
+        'Sự kiện diễn ra suôn sẻ, không có sự cố kỹ thuật hay an ninh phát sinh.',
+        'Có hơn 3.500 lượt khách dừng chân tham gia các hoạt động tại sảnh TTTM.',
+        'Bán hết sạch 100% các mẫu đồng hồ bản giới hạn được mở bán đặc biệt tại sự kiện.',
+      ],
+    },
+  },
+  {
+    id: 'prj-9',
+    companyKey: 'anhkhue',
+    companyName: 'Anh Khuê Watch (Casio)',
+    type: 'bao-cao',
+    typeName: 'Pháp Lý Khuyến Mãi & Hậu Kiểm',
+    title: 'Đăng ký chương trình khuyến mãi với Sở Công Thương & Báo cáo sau chiến dịch',
+    summary: 'Chịu trách nhiệm pháp lý toàn diện cho mọi chiến dịch khuyến mại lớn nhỏ trên toàn quốc: thông báo, đăng ký cấp phép, giám sát cơ cấu giải thưởng và nộp báo cáo kết quả đúng luật.',
+    metricHighlight: '100% hồ sơ thông qua đúng hạn · Tuân thủ tuyệt đối quy định pháp luật',
+    details: {
+      context: 'Mọi chương trình khuyến mại có quy mô lớn từ giảm giá sốc đến bốc thăm trúng thưởng đều bắt buộc phải thông báo hoặc xin phép Sở Công Thương theo Nghị định 81/2018/NĐ-CP.',
+      objectives: [
+        'Đảm bảo thể lệ chương trình khuyến mãi rõ ràng, minh bạch, đúng luật định.',
+        'Nộp hồ sơ trực tuyến qua Cổng Dịch vụ công Quốc gia đúng thời gian quy định trước khi khởi chạy chiến dịch.',
+        'Thực hiện thủ tục báo cáo kết quả thực hiện và nộp thuế giá trị trúng thưởng (nếu có) đúng thời hạn.',
+      ],
+      execution: [
+        'Soạn thảo văn bản thông báo khuyến mãi, biên bản xác định trúng thưởng và bảng kê danh sách quà tặng chi tiết.',
+        'Tương tác trực tiếp với chuyên viên phụ trách của Sở Công Thương các tỉnh thành để giải trình các điểm nghi vấn nếu có.',
+        'Theo dõi tiến độ duyệt hồ sơ và lưu trữ đầy đủ mã số tiếp nhận làm căn cứ xuất hóa đơn khuyến mãi.',
+        'Tổng kết danh sách khách hàng trúng thưởng sau khi chương trình kết thúc và gửi báo cáo kết quả hoàn tất.',
+      ],
+      outcomes: [
+        'Đăng ký và thông báo thành công hơn 40+ đợt khuyến mãi mà không gặp bất kỳ lỗi vi phạm hành chính nào.',
+        'Giúp doanh nghiệp tự tin triển khai các chương trình marketing kích cầu mà không lo rủi ro pháp lý.',
+        'Tối ưu thời gian duyệt hồ sơ chỉ trong vòng 3 ngày làm việc thông qua chuẩn bị hồ sơ bài bản.',
+      ],
+    },
+  },
+];
+
+export const SKILL_CATEGORIES: SkillCategory[] = [
+  {
+    title: 'Trade Marketing & Kích Hoạt Thương Hiệu (Activation)',
+    description: 'Chuyên môn sâu về điểm bán, chương trình khuyến mãi và tổ chức sự kiện thực địa.',
+    skills: [
+      { name: 'Đăng ký CTKM với Sở Công Thương (Nghị định 81)', highlight: true },
+      { name: 'Lập kế hoạch Activation & POP-UP Store', highlight: true },
+      { name: 'Thiết kế, sản xuất & nghiệm thu POSM toàn quốc', highlight: true },
+      { name: 'Tổ chức sự kiện tri ân & workshop trải nghiệm' },
+      { name: 'Phân tích dữ liệu bán hàng & hành vi mua sắm' },
+      { name: 'Báo cáo đánh giá hiệu quả chiến dịch & ROI' },
+    ],
+  },
+  {
+    title: 'Hồ Sơ Đấu Thầu & Quản Lý Dự Án',
+    description: 'Năng lực vận hành dự án giáo dục, hồ sơ thầu quy mô lớn và điều phối liên phòng ban.',
+    skills: [
+      { name: 'Soạn thảo & Hoàn thiện Hồ sơ dự thầu (E-HSDT)', highlight: true },
+      { name: 'Nghiên cứu hồ sơ mời thầu (E-HSMT) & Tiêu chuẩn kỹ thuật', highlight: true },
+      { name: 'Điều phối dự án thực địa tại trường học (6 trường ĐBSCL)', highlight: true },
+      { name: 'Quản lý, đàm phán & giám sát nhà thầu / vendor' },
+      { name: 'Tổ chức tập huấn và chuyển giao thiết bị cho giáo viên' },
+      { name: 'Brief – Proposal – Pitching kế hoạch marketing' },
+    ],
+  },
+  {
+    title: 'Digital Marketing & Sáng Tạo Nội Dung',
+    description: 'Kỹ năng số hóa, xây dựng kênh truyền thông đa phương tiện và SEO website.',
+    skills: [
+      { name: 'Chiến lược Content SEO On-page & Nghiên cứu từ khóa', highlight: true },
+      { name: 'Sáng tạo kịch bản video ngắn (TikTok, Reels, Shorts)', highlight: true },
+      { name: 'Quản lý & phát triển Fanpage cộng đồng' },
+      { name: 'Biên tập & dựng video ngắn (CapCut, Premiere Pro)' },
+      { name: 'Thiết kế ấn phẩm đồ họa (Canva, Photoshop căn bản)' },
+      { name: 'Thiết lập & tối ưu chiến dịch quảng cáo chuyển đổi' },
+    ],
+  },
+];
+
+export const EDUCATION_DATA: EducationItem[] = [
+  {
+    institution: 'Trường Đại học Công Thương TP. Hồ Chí Minh (HUIT)',
+    degree: 'Cử nhân Quản trị Kinh doanh – Chuyên ngành Marketing',
+    period: '2018 – 2022',
+    details: 'Được đào tạo bài bản về nghiên cứu thị trường, quản trị thương hiệu, hành vi người tiêu dùng và chiến lược marketing tích hợp.',
+  },
+  {
+    institution: 'Chứng chỉ Năng lực Ngoại ngữ Quốc tế',
+    degree: 'Chứng chỉ Tiếng Anh B1 (Khung chuẩn Châu Âu - CEFR)',
+    period: 'Cấp tháng 05/2024',
+    details: 'Giao tiếp tốt trong môi trường công việc, đọc hiểu tài liệu chuyên ngành marketing, tài liệu kỹ thuật thiết bị và hợp đồng quốc tế.',
+  },
+  {
+    institution: 'Kỹ năng Công nghệ & Tin học Văn phòng',
+    degree: 'Chứng chỉ Ứng dụng CNTT – Microsoft Office',
+    period: 'Thành thạo',
+    details: 'Sử dụng thành thạo Word (soạn thảo hợp đồng, hồ sơ thầu), Excel (phân tích số liệu bán hàng, lập dự toán), PowerPoint (thuyết trình proposal chuyên nghiệp).',
+  },
+];

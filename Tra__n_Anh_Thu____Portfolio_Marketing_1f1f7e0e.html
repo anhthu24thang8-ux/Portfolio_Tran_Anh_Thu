@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Trần Anh Thư – Portfolio Marketing</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F8FBFD;--surf:#FFFFFF;--y:#FFE7A0;--y2:#FFF3C9;--b:#BFE0F2;--b2:#E4F3FA;--ink:#1E3448;--mute:#5B6F80;--line:#DCE7EE;--acc:#2F7FAE;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17212B;--surf:#1F2C38;--y:#6B5A22;--y2:#2D2B1D;--b:#2F5A73;--b2:#1D3140;--ink:#F3EFDD;--mute:#A9B7C3;--line:#37485A;--acc:#8CCBEA;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#17212B;--surf:#1F2C38;--y:#6B5A22;--y2:#2D2B1D;--b:#2F5A73;--b2:#1D3140;--ink:#F3EFDD;--mute:#A9B7C3;--line:#37485A;--acc:#8CCBEA;color-scheme:dark}
+*{box-sizing:border-box}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:linear-gradient(180deg,color-mix(in srgb,var(--y2) 75%,var(--bg)) 0%,var(--bg) 38%,color-mix(in srgb,var(--b2) 80%,var(--bg)) 100%) fixed;color:var(--ink);font:400 16px/1.6 "Be Vietnam Pro",system-ui,sans-serif}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.6;background:radial-gradient(circle at 94% 6%,var(--y) 0 110px,transparent 111px),radial-gradient(circle at 98% 12%,transparent 0 150px,var(--b) 151px 153px,transparent 154px),radial-gradient(circle at 3% 92%,var(--b) 0 130px,transparent 131px),radial-gradient(circle at 8% 96%,transparent 0 175px,var(--y) 176px 178px,transparent 179px),radial-gradient(circle at 50% 108%,var(--y2) 0 220px,transparent 221px)}
+body::after{content:"";position:fixed;left:0;top:30%;width:220px;height:260px;z-index:-1;pointer-events:none;opacity:.5;background:radial-gradient(var(--b) 2px,transparent 2.4px) 0 0/22px 22px;-webkit-mask:linear-gradient(90deg,#000,transparent);mask:linear-gradient(90deg,#000,transparent)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 82%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:2px solid var(--line)}
+nav .wrap{display:flex;gap:6px;align-items:center;padding-top:10px;padding-bottom:10px;overflow-x:auto}
+nav b{margin-right:auto;font-weight:800;white-space:nowrap}
+nav button{font:600 14px "Be Vietnam Pro",sans-serif;color:var(--ink);background:transparent;border:2px solid transparent;border-radius:99px;padding:7px 16px;cursor:pointer;white-space:nowrap}
+nav button[aria-selected=true]{background:var(--y);border-color:var(--ink)}
+button:focus-visible,a:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+section[hidden]{display:none}
+h1,h2,h3{margin:0;line-height:1.2}
+h2{font-size:28px;font-weight:800;margin:36px 0 6px}
+.lead{color:var(--mute);margin:0 0 24px;max-width:60ch}
+/* 1 */
+.hero{display:grid;grid-template-columns:280px 1fr;gap:36px;padding:40px 0 20px;align-items:center}
+.photo{aspect-ratio:4/5;border-radius:140px 140px 24px 24px;background:var(--b);border:2px dashed var(--ink);display:grid;place-items:center;text-align:center;color:var(--mute);font-size:14px;position:relative;overflow:hidden}
+.photo::before{content:"";position:absolute;left:-20%;bottom:-18%;width:90%;aspect-ratio:1;border-radius:50%;background:var(--y)}
+.photo span{position:relative}
+.hero h1{font-size:clamp(36px,6vw,60px);font-weight:800;letter-spacing:-.02em}
+.role{display:inline-block;margin:10px 0 16px;background:var(--y);padding:3px 14px;border-radius:99px;font-weight:600}
+.sum{max-width:62ch;margin:0 0 20px}
+.contact{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.contact div{background:var(--surf);border:2px solid var(--line);border-radius:14px;padding:10px 14px;font-size:14px;overflow-wrap:anywhere}
+.contact small{display:block;color:var(--mute);font-size:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.chip{background:var(--b2);border:1.5px solid var(--b);border-radius:99px;padding:3px 13px;font-size:14px}
+.chip.y{background:var(--y2);border-color:var(--y)}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.facts div{background:var(--y2);border-radius:18px;padding:16px 18px}
+.facts b{display:block;font-size:26px}
+/* 2 */
+.tl{position:relative;margin:10px 0 40px;padding-left:30px;border-left:3px solid var(--b)}
+.job{position:relative;background:var(--surf);border:2px solid var(--line);border-radius:20px;padding:20px 22px;margin-bottom:22px}
+.job::before{content:"";position:absolute;left:-41px;top:26px;width:16px;height:16px;border-radius:50%;background:var(--y);border:3px solid var(--ink)}
+.job header{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;margin-bottom:6px}
+.job h3{font-size:19px}
+.date{background:var(--y);border-radius:99px;padding:2px 12px;font-size:14px;font-weight:600;white-space:nowrap}
+.co{font:600 16px "Be Vietnam Pro",sans-serif;color:var(--acc);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:4px;text-align:left}
+.job ul{margin:12px 0 14px;padding-left:20px}
+.job li{margin-bottom:4px}
+.go{display:inline-block;font:600 14px "Be Vietnam Pro",sans-serif;background:var(--b);border:2px solid var(--ink);color:var(--ink);border-radius:99px;padding:6px 16px;cursor:pointer}
+.more{background:var(--b2);border-radius:20px;padding:18px 22px;margin-bottom:40px}
+/* 3 */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.filters button{font:600 14px "Be Vietnam Pro",sans-serif;color:var(--ink);background:var(--surf);border:2px solid var(--line);border-radius:99px;padding:6px 16px;cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--b);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;margin-bottom:48px}
+.card{background:var(--surf);border:2px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.card[hidden]{display:none}
+.thumb{aspect-ratio:16/10;display:grid;place-items:center;font-weight:800;font-size:15px;background:var(--b2);border-bottom:2px solid var(--line)}
+.card[data-t=video] .thumb{background:var(--y)}
+.card[data-t=hinh] .thumb{background:var(--y2)}
+.card[data-t=link] .thumb{background:var(--b)}
+.card div.body{padding:14px 16px 16px}
+.card h3{font-size:16px;margin-bottom:4px}
+.card p{margin:0;color:var(--mute);font-size:14px}
+.note{border:2px dashed var(--line);border-radius:14px;padding:12px 16px;color:var(--mute);font-size:14px;margin-bottom:20px}
+.cf{position:relative;margin:8px 0 56px;border:2px solid var(--ink);border-radius:28px;overflow:hidden;background:linear-gradient(120deg,var(--y) 0%,var(--y2) 45%,var(--b2) 100%);padding:30px 28px}
+.cf::after{content:"";position:absolute;right:-50px;bottom:-60px;width:200px;height:200px;border-radius:50%;background:var(--b);opacity:.7}
+.cf h2{margin:0 0 4px}.cf p{margin:0 0 20px;max-width:56ch;position:relative}
+.cl{position:relative;z-index:1;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.cl a{display:block;text-decoration:none;background:var(--surf);border:2px solid var(--ink);border-radius:16px;padding:12px 16px;font-weight:600}
+.cl a small{display:block;font-weight:400;color:var(--mute);font-size:13px;overflow-wrap:anywhere}
+.cl a:hover{background:var(--b)}
+footer{border-top:2px solid var(--line);padding:20px 0 40px;color:var(--mute);font-size:14px}
+@media(max-width:720px){.hero{grid-template-columns:1fr}.photo{max-width:240px}.contact,.facts{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:no-preference){section{animation:in .25s ease}@keyframes in{from{opacity:0}to{opacity:1}}}
+</style>
+</head>
+<body>
+<nav><div class="wrap" role="tablist">
+<b>Trần Anh Thư</b>
+<button role="tab" id="t-gt" aria-selected="true" data-tab="gioi-thieu">Giới thiệu</button>
+<button role="tab" id="t-qt" aria-selected="false" data-tab="qua-trinh">Quá trình làm việc</button>
+<button role="tab" id="t-kq" aria-selected="false" data-tab="ket-qua">Kết quả</button>
+</div></nav>
+
+<main class="wrap">
+<!-- PHẦN 1 -->
+<section id="gioi-thieu">
+<div class="hero">
+<div class="photo"><span>Khu vực<br>ảnh đại diện<br><small>(thay ảnh thật)</small></span></div>
+<div>
+<h1>Trần Anh Thư</h1>
+<div class="role">Marketing Executive</div>
+<p class="sum">Kinh nghiệm triển khai Trade Marketing, Marketing Activation, POSM, khuyến mãi và sự kiện tại điểm bán. Hiện làm các dự án Marketing trong lĩnh vực Giáo dục – STEM, mong muốn phát triển sâu về Activation và các hoạt động kết nối thương hiệu với học sinh, phụ huynh và cộng đồng.</p>
+<div class="contact">
+<div><small>Ngày sinh</small>24/08/2000</div>
+<div><small>Điện thoại</small><a href="tel:0967258317">0967 258 317</a></div>
+<div><small>Email</small><a href="mailto:anhthu24thang8@gmail.com">anhthu24thang8@gmail.com</a></div>
+<div><small>Địa chỉ</small>230/8 Xóm Đất, Bình Thới, TP.HCM</div>
+</div>
+</div></div>
+<div class="facts">
+<div><b>4 năm+</b>Trade Marketing & Marketing tổng hợp</div>
+<div><b>6 hợp đồng</b>đấu thầu thành công, ~3 tỷ VNĐ/hợp đồng</div>
+<div><b>3 ngành</b>Giáo dục STEM, đồng hồ, phụ tùng ô tô</div>
+</div>
+<h2>Kỹ năng</h2>
+<p class="lead">Chuyên môn và kỹ năng mềm theo CV.</p>
+<div class="chips">
+<span class="chip y">Digital Marketing</span><span class="chip y">Edit video</span><span class="chip y">Thiết kế hình ảnh</span><span class="chip y">Quản lý fanpage</span><span class="chip y">Kịch bản video ngắn</span><span class="chip y">Content SEO</span>
+<span class="chip">Đăng ký CTKM – Sở Công Thương</span><span class="chip">Brief – proposal – pitching</span><span class="chip">Hồ sơ thầu, hợp đồng</span><span class="chip">Quản lý vendor</span><span class="chip">Báo cáo & đánh giá chiến dịch</span><span class="chip">Điều phối đa phòng ban</span>
+</div>
+<h2>Học vấn & chứng chỉ</h2>
+<div class="chips"><span class="chip">ĐH Công Thương TP.HCM – QTKD, chuyên ngành Marketing (2018–2022)</span><span class="chip">English B1 (CEFR) – 05/2024</span><span class="chip">Microsoft Office</span></div>
+<p style="margin-top:28px"><button class="go" data-tab="qua-trinh">Xem quá trình làm việc</button></p>
+</section>
+
+<!-- PHẦN 2 -->
+<section id="qua-trinh" hidden>
+<h2>Quá trình làm việc</h2>
+<p class="lead">Bấm tên công ty hoặc nút “Xem kết quả” để mở đúng kết quả của vị trí đó.</p>
+<div class="tl">
+<article class="job">
+<header><div><h3>Marketing Tổng Hợp – Trợ lý dự án</h3><button class="co" data-co="bizmo">Công ty CP Quản lý Đầu tư Bizmo</button></div><span class="date">08/2025 – nay</span></header>
+<ul>
+<li>Xây dựng và triển khai chiến lược marketing đa kênh (social, web, quảng cáo) cho khóa học, sách, học cụ.</li>
+<li>Nghiên cứu từ khóa, tối ưu bài viết chuẩn SEO; tạo nội dung website, blog, fanpage.</li>
+<li>Quản lý, đào tạo đội marketing; phân công content, ads, social; đánh giá KPI định kỳ.</li>
+<li>Hoàn thiện hồ sơ đấu thầu: thành công 6 hợp đồng (2025 – đầu 2026), trung bình ~3 tỷ VNĐ/hợp đồng.</li>
+<li>Triển khai dự án STEM tại 6 trường khu vực ĐBSCL: điều phối đơn hàng, nghiệm thu, tập huấn giáo viên.</li>
+</ul>
+<button class="go" data-co="bizmo">Xem kết quả</button>
+</article>
+<article class="job">
+<header><div><h3>Leader Marketing</h3><button class="co" data-co="nhanhau">Công ty TNHH TM – DV XNK Nhân Hậu</button></div><span class="date">07/2023 – 07/2024</span></header>
+<ul>
+<li>Lập kế hoạch, triển khai Trade Marketing, Promotion, Activation tại hệ thống cửa hàng.</li>
+<li>Phân tích dữ liệu Sales và hành vi khách hàng để đề xuất chương trình theo nhóm khách.</li>
+<li>Điều phối sự kiện, activation tại cửa hàng/TTTM và POP-UP; phối hợp POSM tại điểm bán.</li>
+<li>Theo dõi, đánh giá hiệu quả và lập báo cáo đề xuất tối ưu.</li>
+</ul>
+<button class="go" data-co="nhanhau">Xem kết quả</button>
+</article>
+<article class="job">
+<header><div><h3>Nhân viên Trade Marketing</h3><button class="co" data-co="anhkhue">Công ty CP Anh Khuê Watch</button></div><span class="date">04/2022 – 07/2024</span></header>
+<ul>
+<li>Lập kế hoạch khuyến mãi, activation, POP-UP; thiết kế, sản xuất, quản lý POSM.</li>
+<li>Đăng ký/thông báo chương trình khuyến mãi với cơ quan quản lý.</li>
+<li>Tổ chức sự kiện tri ân khách hàng, lễ kỷ niệm tại TTTM/cửa hàng; báo cáo sau chiến dịch.</li>
+</ul>
+<button class="go" data-co="anhkhue">Xem kết quả</button>
+</article>
+</div>
+<div class="more"><b>Ngành đã làm:</b> Giáo dục – STEM · Đồng hồ Casio · Phụ kiện, phụ tùng ô tô · Nâng cấp ô tô</div>
+</section>
+
+<!-- PHẦN 3 -->
+<section id="ket-qua" hidden>
+<h2>Kết quả mang lại</h2>
+<p class="lead">Báo cáo, video, hình ảnh và bài viết. Có thể mở trực tiếp từ tab này, không cần qua phần 2.</p>
+<div class="filters" role="group" aria-label="Lọc theo công ty">
+<button data-f="all" aria-pressed="true">Tất cả</button>
+<button data-f="bizmo" aria-pressed="false">Bizmo</button>
+<button data-f="nhanhau" aria-pressed="false">Nhân Hậu</button>
+<button data-f="anhkhue" aria-pressed="false">Anh Khuê Watch</button>
+</div>
+<div class="note">Các thẻ dưới đây là bố cục mẫu. Khi duyệt xong, thay bằng file PDF, video, ảnh và link thật.</div>
+<div class="grid">
+<a class="card" href="#" data-co="bizmo" data-t="bao-cao"><div class="thumb">Báo cáo</div><div class="body"><h3>Hồ sơ đấu thầu & nghiệm thu dự án STEM</h3><p>Bizmo · PDF</p></div></a>
+<a class="card" href="#" data-co="bizmo" data-t="hinh"><div class="thumb">Hình ảnh</div><div class="body"><h3>Triển khai tại 6 trường ĐBSCL</h3><p>Bizmo · Album ảnh</p></div></a>
+<a class="card" href="#" data-co="bizmo" data-t="link"><div class="thumb">Bài viết</div><div class="body"><h3>Bài SEO trên website / blog</h3><p>Bizmo · Link bài viết</p></div></a>
+<a class="card" href="#" data-co="bizmo" data-t="video"><div class="thumb">Video</div><div class="body"><h3>Video ngắn Reel / TikTok</h3><p>Bizmo · Video</p></div></a>
+<a class="card" href="#" data-co="nhanhau" data-t="bao-cao"><div class="thumb">Báo cáo</div><div class="body"><h3>Báo cáo hiệu quả chương trình khuyến mãi</h3><p>Nhân Hậu · PDF</p></div></a>
+<a class="card" href="#" data-co="nhanhau" data-t="hinh"><div class="thumb">Hình ảnh</div><div class="body"><h3>Activation & POP-UP tại TTTM</h3><p>Nhân Hậu · Album ảnh</p></div></a>
+<a class="card" href="#" data-co="anhkhue" data-t="hinh"><div class="thumb">Hình ảnh</div><div class="body"><h3>Thiết kế POSM tại điểm bán</h3><p>Anh Khuê · Album ảnh</p></div></a>
+<a class="card" href="#" data-co="anhkhue" data-t="video"><div class="thumb">Video</div><div class="body"><h3>Sự kiện tri ân khách hàng</h3><p>Anh Khuê · Video</p></div></a>
+<a class="card" href="#" data-co="anhkhue" data-t="bao-cao"><div class="thumb">Báo cáo</div><div class="body"><h3>Báo cáo đánh giá sau chiến dịch</h3><p>Anh Khuê · PDF</p></div></a>
+</div>
+<div class="cf" id="lien-he">
+<h2>Liên hệ với mình</h2>
+<p>Nhắn mình qua kênh nào tiện nhất, mình sẽ phản hồi sớm.</p>
+<div class="cl">
+<a href="#" target="_blank" rel="noopener">Facebook<small>Thêm link trang cá nhân</small></a>
+<a href="#" target="_blank" rel="noopener">TikTok<small>Thêm link kênh TikTok</small></a>
+<a href="https://zalo.me/0967258317" target="_blank" rel="noopener">Zalo<small>0967 258 317</small></a>
+<a href="mailto:anhthu24thang8@gmail.com">Email<small>anhthu24thang8@gmail.com</small></a>
+<a href="tel:0967258317">Điện thoại<small>0967 258 317</small></a>
+</div>
+</div>
+</section>
+</main>
+<footer><div class="wrap">Trần Anh Thư · Marketing Executive · anhthu24thang8@gmail.com</div></footer>
+
+<script>
+(function(){
+var tabs={'gioi-thieu':'t-gt','qua-trinh':'t-qt','ket-qua':'t-kq'};
+function show(id){
+  Object.keys(tabs).forEach(function(k){
+    document.getElementById(k).hidden=(k!==id);
+    document.getElementById(tabs[k]).setAttribute('aria-selected',k===id);
+  });
+  window.scrollTo(0,0);
+}
+function filter(f){
+  document.querySelectorAll('.filters button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.f===f)});
+  document.querySelectorAll('.card').forEach(function(c){c.hidden=(f!=='all'&&c.dataset.co!==f)});
+}
+document.addEventListener('click',function(e){
+  var el=e.target.closest('[data-tab],[data-co],[data-f],.card');
+  if(!el)return;
+  if(el.classList.contains('card')){e.preventDefault();return}
+  if(el.dataset.f){filter(el.dataset.f);return}
+  if(el.dataset.co){filter(el.dataset.co);show('ket-qua');return}
+  if(el.dataset.tab){show(el.dataset.tab)}
+});
+var h=(location.hash||'').slice(1);
+if(tabs[h])show(h);
+})();
+</script>
+</body>
+</html>
