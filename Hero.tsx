@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowDown, Copy, Check, Phone, Mail, MapPin, Calendar, Camera } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
+import avatar2 from '../avatar2.png';
 
 interface HeroProps {
   onNavigate: (sectionId: string) => void;
@@ -59,7 +60,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onShowToast }) => {
                   />
                 ) : (
                   <img
-                    src="/assets/aistudio/ava_tr_9cfa4d50.png"
+                   src="/assets/aistudio/ava_tr_9cfa4d50.png" thành src={avatar2}
                     alt={PERSONAL_INFO.name}
                     className="w-full h-full object-cover"
                   />
