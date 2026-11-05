@@ -60,7 +60,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onShowToast }) => {
                   />
                 ) : (
                   <img
-                   src="/assets/aistudio/ava_tr_9cfa4d50.png" thành src={avatar2}
+                   src="https://raw.githubusercontent.com/anhthu24thang8-ux/Portfolio_Tran_Anh_Thu/main/avatar2.png"
                     alt={PERSONAL_INFO.name}
                     className="w-full h-full object-cover"
                   />
