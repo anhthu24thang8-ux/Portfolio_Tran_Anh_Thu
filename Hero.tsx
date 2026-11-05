@@ -62,7 +62,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onShowToast }) => {
                   <img
                    src="https://raw.githubusercontent.com/anhthu24thang8-ux/Portfolio_Tran_Anh_Thu/main/avatar2.png"
                     alt={PERSONAL_INFO.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                   />
                 )}
 
